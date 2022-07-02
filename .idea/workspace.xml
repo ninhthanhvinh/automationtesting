@@ -5,20 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4d0a700-e8f3-43e9-a7b6-ed0dae3ce70d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/CreateCommentTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/CreateItemTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/EditAuctionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetBrandsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListAuctionByTypeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListAuctionsByStatusTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListAuctionsByUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListCommentTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetDetailsAutionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListLikesTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetTotalLikeOfAuctionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/AuctionCreateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/AuctionCreateTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetCategoriesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetCategoriesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/ContactUsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/ContactUsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/CreateCommentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/CreateCommentTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetNewsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetNewsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tvinh/test1/LoginTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tvinh/test1/LoginTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tvinh/test1/CreateCommentTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tvinh/test1/CreateCommentTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tvinh/test1/GetBrandsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tvinh/test1/GetBrandsTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tvinh/test1/GetCategoriesTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tvinh/test1/GetCategoriesTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tvinh/test1/GetNewsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tvinh/test1/GetNewsTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +58,25 @@
       <recent name="com.tvinh.test1" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.GetBrandsTest.Test01">
+  <component name="RunManager" selected="TestNG.ContactUsTest.Test01">
+    <configuration name="ContactUsTest.Test01" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Test1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tvinh.test1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tvinh.test1" />
+      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.ContactUsTest" />
+      <option name="METHOD_NAME" value="Test01" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CreateCommentTest.TestCase01" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Test1" />
       <extension name="coverage">
@@ -80,7 +95,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CreateItemTest.TestCase01" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GetDetailsAutionTest.TestCase01" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Test1" />
       <extension name="coverage">
         <pattern>
@@ -89,7 +104,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.tvinh.test1" />
-      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.CreateItemTest" />
+      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.GetDetailsAutionTest" />
       <option name="METHOD_NAME" value="TestCase01" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -98,7 +113,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EditAuctionTest.TestCase01" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GetNewsTest.Test01" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Test1" />
       <extension name="coverage">
         <pattern>
@@ -107,25 +122,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.tvinh.test1" />
-      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.EditAuctionTest" />
-      <option name="METHOD_NAME" value="TestCase01" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GetBrandsTest.Test01" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Test1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tvinh.test1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.tvinh.test1" />
-      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.GetBrandsTest" />
+      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.GetNewsTest" />
       <option name="METHOD_NAME" value="Test01" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -134,7 +131,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetListCommentTest.TestCase01" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GetTotalLikeOfAuctionTest.TestCase01" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Test1" />
       <extension name="coverage">
         <pattern>
@@ -143,7 +140,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.tvinh.test1" />
-      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.GetListCommentTest" />
+      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.GetTotalLikeOfAuctionTest" />
       <option name="METHOD_NAME" value="TestCase01" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -154,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.GetBrandsTest.Test01" />
+        <item itemvalue="TestNG.ContactUsTest.Test01" />
+        <item itemvalue="TestNG.GetTotalLikeOfAuctionTest.TestCase01" />
+        <item itemvalue="TestNG.GetDetailsAutionTest.TestCase01" />
         <item itemvalue="TestNG.CreateCommentTest.TestCase01" />
-        <item itemvalue="TestNG.CreateItemTest.TestCase01" />
-        <item itemvalue="TestNG.GetListCommentTest.TestCase01" />
-        <item itemvalue="TestNG.EditAuctionTest.TestCase01" />
+        <item itemvalue="TestNG.GetNewsTest.Test01" />
       </list>
     </recent_temporary>
   </component>
@@ -195,15 +192,6 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tvinh/test1/CreateCommentTest.java</url>
-          <line>22</line>
-          <properties class="com.tvinh.test1.CreateCommentTest" method="TestCase01">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

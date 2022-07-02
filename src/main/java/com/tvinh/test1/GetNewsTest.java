@@ -2,7 +2,9 @@ package com.tvinh.test1;
 
 import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
+import static org.testng.Assert.assertNotNull;
 
+import io.restassured.path.json.JsonPath;
 import org.json.simple.JSONObject;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
@@ -24,76 +26,25 @@ public class GetNewsTest {
                 queryParam("count", "2").
                 when().
                 get("/news");
-
+        System.out.println(res.getBody().asString());
         AssertJUnit.assertNotNull(res);
     }
 
     @Test
     public void Test02() {
-        baseURI = "https://auction-app3.herokuapp.com/api";
+        baseURI = "https://auctions-app-2.herokuapp.com/api";
 
+        LoginTest loginTest = new LoginTest();
+        String accessToken = "bearer" + loginTest.getAccessToken();
 
         Response res = given().accept(JSON).
+                header("Authorization", accessToken).
                 queryParam("index", "1").
                 queryParam("count", "2").
                 when().
                 get("/news");
-
-        AssertJUnit.assertNotNull(res);
-    }
-
-    @Test
-    public void Test03() {
-        baseURI = "https://auction-app3.herokuapp.com/api";
-
-
-        Response res = given().accept(JSON).
-                queryParam("index", "1").
-                queryParam("count", "2").
-                when().
-                get("/news");
-
-        AssertJUnit.assertNotNull(res);
-    }
-
-    @Test
-    public void Test04() {
-        baseURI = "https://auction-app3.herokuapp.com/api";
-
-
-        Response res = given().accept(JSON).
-                queryParam("index", "1").
-                queryParam("count", "2").
-                when().
-                get("/news");
-
-        AssertJUnit.assertNotNull(res);
-    }
-
-    @Test
-    public void Test05() {
-        baseURI = "https://auction-app3.herokuapp.com/api";
-
-
-        Response res = given().accept(JSON).
-                queryParam("index", "1").
-                queryParam("count", "2").
-                when().
-                get("/news");
-
-        AssertJUnit.assertNotNull(res);
-    }
-    @Test
-    public void Test06() {
-            baseURI = "https://auction-app3.herokuapp.com/api";
-
-
-            Response res = given().accept(JSON).
-                    queryParam("index", "1").
-                    queryParam("count", "2").
-                    when().
-                    get("/news");
-
-            AssertJUnit.assertNotNull(res);
+        System.out.println(res.getBody().asString());
+        JsonPath jsonPath = res.jsonPath();
+        assertNotNull(jsonPath.getJsonObject("data"));
     }
 }
