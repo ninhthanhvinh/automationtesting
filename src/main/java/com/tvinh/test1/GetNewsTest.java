@@ -18,18 +18,12 @@ public class GetNewsTest {
     public void Test01() {
         baseURI = "https://auction-app3.herokuapp.com/api";
 
-        JSONObject req = new JSONObject();
-
-        req.put("index", "5");
-        req.put("count", "8");
 
         Response res = given().accept(JSON).
                 queryParam("index", "1").
                 queryParam("count", "2").
                 when().
                 get("/news");
-
-
 
         AssertJUnit.assertNotNull(res);
     }
@@ -38,15 +32,12 @@ public class GetNewsTest {
     public void Test02() {
         baseURI = "https://auction-app3.herokuapp.com/api";
 
-        JSONObject req = new JSONObject();
 
-        req.put("access_token", ACCESS_TOKEN);
-        req.put("index", "5");
-        req.put("count", "8");
-
-        Response res = given().get("/auctions/listAuctionsByStatus/2");
-
-        res.then().statusCode(500);
+        Response res = given().accept(JSON).
+                queryParam("index", "1").
+                queryParam("count", "2").
+                when().
+                get("/news");
 
         AssertJUnit.assertNotNull(res);
     }
@@ -55,15 +46,12 @@ public class GetNewsTest {
     public void Test03() {
         baseURI = "https://auction-app3.herokuapp.com/api";
 
-        JSONObject req = new JSONObject();
 
-        req.put("access_token", ACCESS_TOKEN);
-        req.put("index", "5");
-        req.put("count", "8");
-
-        Response res = given().get("/auctions/listAuctionsByStatus/3");
-
-        res.then().statusCode(500);
+        Response res = given().accept(JSON).
+                queryParam("index", "1").
+                queryParam("count", "2").
+                when().
+                get("/news");
 
         AssertJUnit.assertNotNull(res);
     }
@@ -72,15 +60,12 @@ public class GetNewsTest {
     public void Test04() {
         baseURI = "https://auction-app3.herokuapp.com/api";
 
-        JSONObject req = new JSONObject();
 
-        req.put("access_token", ACCESS_TOKEN);
-        req.put("index", "5");
-        req.put("count", "8");
-
-        Response res = given().get("/auctions/listAuctionsByStatus/4");
-
-        res.then().statusCode(500);
+        Response res = given().accept(JSON).
+                queryParam("index", "1").
+                queryParam("count", "2").
+                when().
+                get("/news");
 
         AssertJUnit.assertNotNull(res);
     }
@@ -89,33 +74,26 @@ public class GetNewsTest {
     public void Test05() {
         baseURI = "https://auction-app3.herokuapp.com/api";
 
-        JSONObject req = new JSONObject();
 
-        req.put("access_token", ACCESS_TOKEN);
-        req.put("index", "5");
-        req.put("count", "8");
-
-        Response res = given().get("/auctions/listAuctionsByStatus/5");
-
-        res.then().statusCode(500);
+        Response res = given().accept(JSON).
+                queryParam("index", "1").
+                queryParam("count", "2").
+                when().
+                get("/news");
 
         AssertJUnit.assertNotNull(res);
     }
-
     @Test
     public void Test06() {
-        baseURI = "https://auction-app3.herokuapp.com/api";
+            baseURI = "https://auction-app3.herokuapp.com/api";
 
-        JSONObject req = new JSONObject();
 
-        req.put("access_token", ACCESS_TOKEN);
-        req.put("index", "5");
-        req.put("count", "8");
+            Response res = given().accept(JSON).
+                    queryParam("index", "1").
+                    queryParam("count", "2").
+                    when().
+                    get("/news");
 
-        Response res = given().get("/auctions/listAuctionsByStatus/6");
-
-        res.then().statusCode(500);
-
-        AssertJUnit.assertNotNull(res);
+            AssertJUnit.assertNotNull(res);
     }
 }

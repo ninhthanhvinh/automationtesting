@@ -5,23 +5,16 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.json.simple.JSONObject;
-import org.testng.TestListenerAdapter;
-import org.testng.TestNG;
 import org.testng.annotations.Test;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
 
 import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
 import static org.testng.AssertJUnit.assertEquals;
 
-public class AuctionCreateTest {
-
-    Map<String, Object> map = new HashMap<String, Object>();
+public class EditAuctionTest {
     @Test
     public void TestCase01(){
 
@@ -47,23 +40,15 @@ public class AuctionCreateTest {
         String accessToken = "bearer" + loginTest.getAccessToken();
 
         Response response = given().
-                            header("Authorization", accessToken).
-                            contentType(ContentType.JSON).
-                            with().
-                            body(request.toJSONString()).
-                            when().
-                            post("/auctions/create");
+                header("Authorization", accessToken).
+                contentType(ContentType.JSON).
+                with().
+                pathParam("auctionID","255").
+                body(request.toJSONString()).
+                when().
+                post("/auctions/edit/{auctionID}");
         System.out.println(response.getBody().asString());
         JsonPath jsonPath = response.jsonPath();
         assertEquals(jsonPath.getInt("code"), 1000);
     }
-
-    public void call(){
-        TestListenerAdapter tla = new TestListenerAdapter();
-        TestNG testng = new TestNG();
-        testng.setTestClasses(new Class[] { AuctionCreateTest.class });
-        testng.addListener(tla);
-        testng.run();
-    }
-
 }

@@ -30,10 +30,11 @@ public class LoginTest {
 
         JSONObject request = new JSONObject();
 
-        baseURI = AutomationTesting.baseuri;
+        //baseURI = AutomationTesting.baseuri;
+        baseURI = "https://auctions-app-2.herokuapp.com/api";
 
-        request.put("email", "ninhthanhvinh@gmail.com");
-        request.put("password", "123456");
+        request.put("email", "ninhthanhvinh607@gmail.com");
+        request.put("password", "12345678");
 
         Response response = given().contentType(JSON).
                 body(request.toJSONString()).
@@ -166,10 +167,11 @@ public class LoginTest {
 
         JSONObject request = new JSONObject();
 
-        baseURI = AutomationTesting.baseuri;
+        //baseURI = AutomationTesting.baseuri;
+        baseURI = "https://auctions-app-2.herokuapp.com/api";
 
-        request.put("email", "ninhthanhvinh@gmail.com");
-        request.put("password", "123456");
+        request.put("email", "ninhthanhvinh607@gmail.com");
+        request.put("password", "12345678");
 
         Response response = given().contentType(JSON).
                 body(request.toJSONString()).

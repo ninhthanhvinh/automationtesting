@@ -10,13 +10,13 @@ import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
 import static org.testng.AssertJUnit.assertNotNull;
 
-public class GetCategoriesTest {
+public class GetBrandsTest {
     @Test
     public void Test01(){
         //baseURI = AutomationTesting.baseuri;
         baseURI = "https://auctions-app-2.herokuapp.com/api";
 
-        Response response = given().contentType(ContentType.JSON).when().get("/categories");
+        Response response = given().contentType(ContentType.JSON).when().get("/brands");
         System.out.println(response.getBody().asString());
         assertNotNull(response);
 
@@ -25,7 +25,7 @@ public class GetCategoriesTest {
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();
-        testng.setTestClasses(new Class[] { GetCategoriesTest.class });
+        testng.setTestClasses(new Class[] { GetBrandsTest.class });
         testng.addListener(tla);
         testng.run();
     }
