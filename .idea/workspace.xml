@@ -8,6 +8,7 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/CreateCommentTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/CreateItemTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/EditAuctionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetBrandsTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListAuctionByTypeTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListAuctionsByStatusTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListAuctionsByUser.java" afterDir="false" />
@@ -197,7 +198,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/tvinh/test1/CreateCommentTest.java</url>
-          <line>20</line>
+          <line>22</line>
           <properties class="com.tvinh.test1.CreateCommentTest" method="TestCase01">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
