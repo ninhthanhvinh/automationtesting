@@ -30,7 +30,7 @@ public class Create_bid {
                             header("Authorization", "bearer" + ACCESS_TOKEN).
                             contentType(JSON).
                         with().
-                            pathParam("auctionId", 1).
+                            pathParam("auctionId", 255).
                             queryParam("price", 1).
                             queryParam("bid_last_id", "1234").
                         when().
@@ -40,7 +40,7 @@ public class Create_bid {
         System.out.println(res.getBody().asString());
 
         JsonPath jpath = res.jsonPath();
-        assertEquals(jpath.getInt("code"), 1001);
+        assertEquals(jpath.getInt("code"), 1000);
 
     }
 

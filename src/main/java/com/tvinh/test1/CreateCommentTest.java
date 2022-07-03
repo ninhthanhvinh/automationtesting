@@ -25,9 +25,10 @@ public class CreateCommentTest {
         baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         JSONObject request = new JSONObject();
+        /*
         request.put("content", "Hien dep trai");
         request.put("comment_last_id", 0);
-
+*/
         LoginTest loginTest = new LoginTest();
         String accessToken = "bearer" + loginTest.getAccessToken();
 
@@ -36,6 +37,8 @@ public class CreateCommentTest {
                 contentType(ContentType.JSON).
                 with().
                 pathParam("auctionId", "255").
+                queryParam("content", "Hien dep trai").
+                queryParam("comment_last_id", 0).
                 with().
                 body(request.toJSONString()).
                 when().

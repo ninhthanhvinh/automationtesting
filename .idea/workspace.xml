@@ -5,20 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4d0a700-e8f3-43e9-a7b6-ed0dae3ce70d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/Create_bid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/Get_list_bids.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/Get_news.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/Get_notifications.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/Get_slider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/Like_auction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/Read_new.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/Read_notifications.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/Search.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetBrandsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetBrandsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetCategoriesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetCategoriesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tvinh/test1/GetBrandsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tvinh/test1/GetBrandsTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/tvinh/test1/GetCategoriesTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tvinh/test1/GetCategoriesTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/CreateCommentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/CreateCommentTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/Create_bid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/Create_bid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tvinh/test1/CreateCommentTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tvinh/test1/CreateCommentTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tvinh/test1/Create_bid.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tvinh/test1/Create_bid.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +57,7 @@
       <recent name="com.tvinh.test1" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Create_bid">
+  <component name="RunManager" selected="TestNG.Read_new">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-18 (2)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -83,6 +74,32 @@
       <option name="PORT" value="5005" />
       <option name="AUTO_RESTART" value="false" />
       <method v="2" />
+    </configuration>
+    <configuration name="CreateCommentTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Test1" />
+      <shortenClasspath name="NONE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tvinh.test1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.tvinh.test1" />
+      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.CreateCommentTest" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Create_bid" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Test1" />
@@ -110,7 +127,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetBrandsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GetNewsTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Test1" />
       <shortenClasspath name="NONE" />
       <extension name="coverage">
@@ -121,7 +138,7 @@
       </extension>
       <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="com.tvinh.test1" />
-      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.GetBrandsTest" />
+      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.GetNewsTest" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="PARAMETERS" value="" />
@@ -136,7 +153,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetCategoriesTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Get_news" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Test1" />
       <shortenClasspath name="NONE" />
       <extension name="coverage">
@@ -147,7 +164,7 @@
       </extension>
       <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="com.tvinh.test1" />
-      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.GetCategoriesTest" />
+      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.Get_news" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="PARAMETERS" value="" />
@@ -162,7 +179,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetListLikesTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Read_new" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Test1" />
       <shortenClasspath name="NONE" />
       <extension name="coverage">
@@ -173,33 +190,7 @@
       </extension>
       <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="com.tvinh.test1" />
-      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.GetListLikesTest" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Get_list_bids" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Test1" />
-      <shortenClasspath name="NONE" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tvinh.test1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="com.tvinh.test1" />
-      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.Get_list_bids" />
+      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.Read_new" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="PARAMETERS" value="" />
@@ -244,11 +235,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Read_new" />
         <item itemvalue="TestNG.Create_bid" />
-        <item itemvalue="TestNG.Get_list_bids" />
-        <item itemvalue="TestNG.GetBrandsTest" />
-        <item itemvalue="TestNG.GetCategoriesTest" />
-        <item itemvalue="TestNG.GetListLikesTest" />
+        <item itemvalue="TestNG.Get_news" />
+        <item itemvalue="TestNG.GetNewsTest" />
+        <item itemvalue="TestNG.CreateCommentTest" />
       </list>
     </recent_temporary>
   </component>
