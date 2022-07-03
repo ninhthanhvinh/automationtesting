@@ -16,7 +16,11 @@ public class GetCategoriesTest {
         //baseURI = AutomationTesting.baseuri;
         baseURI = "https://auctions-app-2.herokuapp.com/api";
 
-        Response response = given().contentType(ContentType.JSON).when().get("/categories");
+        Response response = given().
+                                contentType(ContentType.JSON).
+                            when().
+                                get("/categories");
+        response.then().statusCode(200);
         System.out.println(response.getBody().asString());
         assertNotNull(response);
 

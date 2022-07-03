@@ -16,7 +16,10 @@ public class GetBrandsTest {
         //baseURI = AutomationTesting.baseuri;
         baseURI = "https://auctions-app-2.herokuapp.com/api";
 
-        Response response = given().contentType(ContentType.JSON).when().get("/brands");
+        Response response = given().
+                                contentType(ContentType.JSON).
+                            when().
+                                get("/brands");
         System.out.println(response.getBody().asString());
         assertNotNull(response);
 
