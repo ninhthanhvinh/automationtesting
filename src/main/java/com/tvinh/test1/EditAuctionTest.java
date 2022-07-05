@@ -5,6 +5,8 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.json.simple.JSONObject;
+import org.testng.TestListenerAdapter;
+import org.testng.TestNG;
 import org.testng.annotations.Test;
 
 import java.time.LocalDateTime;
@@ -50,5 +52,13 @@ public class EditAuctionTest {
         System.out.println(response.getBody().asString());
         JsonPath jsonPath = response.jsonPath();
         assertEquals(jsonPath.getInt("code"), 1000);
+    }
+
+    public void call(){
+        TestListenerAdapter tla = new TestListenerAdapter();
+        TestNG testng = new TestNG();
+        testng.setTestClasses(new Class[] { EditAuctionTest.class });
+        testng.addListener(tla);
+        testng.run();
     }
 }

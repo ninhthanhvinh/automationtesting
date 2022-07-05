@@ -3,6 +3,8 @@ package com.tvinh.test1;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.testng.TestListenerAdapter;
+import org.testng.TestNG;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.baseURI;
@@ -25,5 +27,13 @@ public class GetTotalLikeOfAuctionTest {
         assertEquals(jsonPath.getInt("code"), 1000);
         assertNotNull(jsonPath.getJsonObject("data"));
 
+    }
+
+    public void call(){
+        TestListenerAdapter tla = new TestListenerAdapter();
+        TestNG testng = new TestNG();
+        testng.setTestClasses(new Class[] { GetTotalLikeOfAuctionTest.class });
+        testng.addListener(tla);
+        testng.run();
     }
 }

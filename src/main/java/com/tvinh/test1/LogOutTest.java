@@ -2,6 +2,7 @@ package com.tvinh.test1;
 
 import static io.restassured.RestAssured.*;
 import static org.testng.Assert.assertNotEquals;
+import static org.testng.AssertJUnit.assertEquals;
 
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
@@ -29,7 +30,7 @@ public class LogOutTest {
         JsonPath jpath = response.jsonPath();
         int code = jpath.getInt("code");
         System.out.println(code);
-        assertNotEquals(code, 1000);
+        assertEquals(code, 1000);
 
     }
 

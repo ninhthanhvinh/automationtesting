@@ -7,6 +7,8 @@ import static org.testng.Assert.assertNotNull;
 import io.restassured.path.json.JsonPath;
 import org.json.simple.JSONObject;
 import org.testng.AssertJUnit;
+import org.testng.TestListenerAdapter;
+import org.testng.TestNG;
 import org.testng.annotations.Test;
 
 import io.restassured.response.Response;
@@ -46,5 +48,13 @@ public class GetNewsTest {
         System.out.println(res.getBody().asString());
         JsonPath jsonPath = res.jsonPath();
         assertNotNull(jsonPath.getJsonObject("data"));
+    }
+
+    public void call(){
+        TestListenerAdapter tla = new TestListenerAdapter();
+        TestNG testng = new TestNG();
+        testng.setTestClasses(new Class[] { GetNewsTest.class });
+        testng.addListener(tla);
+        testng.run();
     }
 }
