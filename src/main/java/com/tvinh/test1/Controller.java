@@ -46,8 +46,8 @@ public class Controller implements Initializable {
         staticTxtArea = textAreaGUI;
     }
 
-    public void Test(){
-
+    public void Clear(){
+        textAreaGUI.clear();
     }
 
     public void setUriChoice(ActionEvent event){
