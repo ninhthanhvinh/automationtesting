@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="6" passed="5" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-25T19:46:35 ICT" name="Command line suite" finished-at="2022-06-25T19:46:51 ICT" duration-ms="16472">
+  <suite started-at="2022-07-04T21:50:54 ICT" name="Command line suite" finished-at="2022-07-04T21:51:04 ICT" duration-ms="10020">
     <groups>
     </groups>
-    <test started-at="2022-06-25T19:46:35 ICT" name="Command line test" finished-at="2022-06-25T19:46:51 ICT" duration-ms="16472">
+    <test started-at="2022-07-04T21:50:54 ICT" name="Command line test" finished-at="2022-07-04T21:51:04 ICT" duration-ms="10020">
       <class name="com.tvinh.test1.LoginTest">
-        <test-method signature="Test01()[pri:0, instance:com.tvinh.test1.LoginTest@a846b26]" started-at="2022-06-25T19:46:35 ICT" name="Test01" finished-at="2022-06-25T19:46:44 ICT" duration-ms="9427" status="PASS">
+        <test-method signature="Test01()[pri:0, instance:com.tvinh.test1.LoginTest@4e21f84e]" started-at="2022-07-04T21:50:54 ICT" name="Test01" finished-at="2022-07-04T21:50:57 ICT" duration-ms="3183" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test01 -->
-        <test-method signature="Test02()[pri:0, instance:com.tvinh.test1.LoginTest@a846b26]" started-at="2022-06-25T19:46:44 ICT" name="Test02" finished-at="2022-06-25T19:46:46 ICT" duration-ms="1445" status="PASS">
+        <test-method signature="Test02()[pri:0, instance:com.tvinh.test1.LoginTest@4e21f84e]" started-at="2022-07-04T21:50:57 ICT" name="Test02" finished-at="2022-07-04T21:50:59 ICT" duration-ms="1331" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test02 -->
-        <test-method signature="Test03()[pri:0, instance:com.tvinh.test1.LoginTest@a846b26]" started-at="2022-06-25T19:46:46 ICT" name="Test03" finished-at="2022-06-25T19:46:47 ICT" duration-ms="1419" status="PASS">
+        <test-method signature="Test03()[pri:0, instance:com.tvinh.test1.LoginTest@4e21f84e]" started-at="2022-07-04T21:50:59 ICT" name="Test03" finished-at="2022-07-04T21:51:00 ICT" duration-ms="1655" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test03 -->
-        <test-method signature="Test04()[pri:0, instance:com.tvinh.test1.LoginTest@a846b26]" started-at="2022-06-25T19:46:47 ICT" name="Test04" finished-at="2022-06-25T19:46:49 ICT" duration-ms="1396" status="FAIL">
+        <test-method signature="Test04()[pri:0, instance:com.tvinh.test1.LoginTest@4e21f84e]" started-at="2022-07-04T21:51:00 ICT" name="Test04" finished-at="2022-07-04T21:51:02 ICT" duration-ms="1281" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected:<1001> but was:<1002>]]>
@@ -31,7 +31,7 @@ at org.testng@7.6.0/org.testng.AssertJUnit.failNotEquals(AssertJUnit.java:467)
 at org.testng@7.6.0/org.testng.AssertJUnit.assertEquals(AssertJUnit.java:88)
 at org.testng@7.6.0/org.testng.AssertJUnit.assertEquals(AssertJUnit.java:318)
 at org.testng@7.6.0/org.testng.AssertJUnit.assertEquals(AssertJUnit.java:328)
-at com.tvinh.test1/com.tvinh.test1.LoginTest.Test04(LoginTest.java:109)
+at com.tvinh.test1/com.tvinh.test1.LoginTest.Test04(LoginTest.java:110)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 at org.testng@7.6.0/org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -55,7 +55,7 @@ at org.testng@7.6.0/org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
 at org.testng@7.6.0/org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
 at org.testng@7.6.0/org.testng.TestNG.runSuites(TestNG.java:1099)
 at org.testng@7.6.0/org.testng.TestNG.run(TestNG.java:1067)
-at com.tvinh.test1/com.tvinh.test1.LoginTest.call(LoginTest.java:161)
+at com.tvinh.test1/com.tvinh.test1.LoginTest.call(LoginTest.java:162)
 at com.tvinh.test1/com.tvinh.test1.Controller.Test(Controller.java:49)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:577)
@@ -117,11 +117,11 @@ at java.base/java.lang.Thread.run(Thread.java:833)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test04 -->
-        <test-method signature="Test05()[pri:0, instance:com.tvinh.test1.LoginTest@a846b26]" started-at="2022-06-25T19:46:49 ICT" name="Test05" finished-at="2022-06-25T19:46:50 ICT" duration-ms="1349" status="PASS">
+        <test-method signature="Test05()[pri:0, instance:com.tvinh.test1.LoginTest@4e21f84e]" started-at="2022-07-04T21:51:02 ICT" name="Test05" finished-at="2022-07-04T21:51:03 ICT" duration-ms="1261" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test05 -->
-        <test-method signature="Test06()[pri:0, instance:com.tvinh.test1.LoginTest@a846b26]" started-at="2022-06-25T19:46:50 ICT" name="Test06" finished-at="2022-06-25T19:46:51 ICT" duration-ms="1392" status="PASS">
+        <test-method signature="Test06()[pri:0, instance:com.tvinh.test1.LoginTest@4e21f84e]" started-at="2022-07-04T21:51:03 ICT" name="Test06" finished-at="2022-07-04T21:51:04 ICT" duration-ms="1286" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test06 -->
