@@ -22,7 +22,7 @@ public class Delete_comment {
 
     @Test
     public void Test01() {
-        baseURI = "https://auction-app3.herokuapp.com/api";
+        baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         LoginTest loginTest = new LoginTest();
         String ACCESS_TOKEN = loginTest.getAccessToken();
@@ -34,7 +34,7 @@ public class Delete_comment {
                             header("Authorization", "bearer" + ACCESS_TOKEN).
                             contentType(ContentType.JSON).
                         with().
-                            pathParam("commentId", 255).
+                            pathParam("commentId", "255").
                         with().
                             body(request.toJSONString()).
                         when().

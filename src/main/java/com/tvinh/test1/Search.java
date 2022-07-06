@@ -99,4 +99,11 @@ public class Search {
         assertEquals(jpath.getInt("code"), 9998);
     }
 
+    public void call(){
+        TestListenerAdapter tla = new TestListenerAdapter();
+        TestNG testng = new TestNG();
+        testng.setTestClasses(new Class[] { Search.class });
+        testng.addListener(tla);
+        testng.run();
+    }
 }

@@ -5,20 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4d0a700-e8f3-43e9-a7b6-ed0dae3ce70d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/Accept_max_bid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/Delete_comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListAuctionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/ContactUsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/ContactUsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/Delete_comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/Delete_comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/EditAuctionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/EditAuctionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetDetailsAutionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetDetailsAutionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListAuctionByTypeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListAuctionByTypeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListAuctionsByStatusTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListAuctionsByStatusTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListAuctionsByUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListAuctionsByUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListLikesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListLikesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetTotalLikeOfAuctionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetTotalLikeOfAuctionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/Search.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tvinh/test1/ContactUsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tvinh/test1/ContactUsTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tvinh/test1/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tvinh/test1/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tvinh/test1/Delete_comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tvinh/test1/Delete_comment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tvinh/test1/EditAuctionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tvinh/test1/EditAuctionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tvinh/test1/GetDetailsAutionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tvinh/test1/GetDetailsAutionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tvinh/test1/GetListAuctionByTypeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tvinh/test1/GetListAuctionByTypeTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tvinh/test1/GetListAuctionsByStatusTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tvinh/test1/GetListAuctionsByStatusTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tvinh/test1/GetListAuctionsByUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tvinh/test1/GetListAuctionsByUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tvinh/test1/GetListLikesTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tvinh/test1/GetListLikesTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tvinh/test1/GetTotalLikeOfAuctionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tvinh/test1/GetTotalLikeOfAuctionTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/Command line suite/Command line test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/Command line suite/Command line test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/Command line suite/Command line test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/Command line suite/Command line test.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-com.tvinh.test1.LoginTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.tvinh.test1.LoginTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/old/Command line suite/classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Command line suite/classes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/Command line suite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Command line suite/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/Command line suite/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Command line suite/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/old/Command line suite/methods-alphabetical.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Command line suite/methods-alphabetical.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/Command line suite/methods-not-run.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Command line suite/methods-not-run.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/old/Command line suite/methods.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Command line suite/methods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/Command line suite/testng.xml.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Command line suite/testng.xml.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/old/Command line suite/toc.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Command line suite/toc.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/old/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/testng-results.xml" afterDir="false" />
@@ -102,7 +117,7 @@
       <option name="AUTO_RESTART" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Delete_comment" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CreateCommentTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Test1" />
       <shortenClasspath name="NONE" />
       <extension name="coverage">
@@ -113,7 +128,7 @@
       </extension>
       <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="com.tvinh.test1" />
-      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.Delete_comment" />
+      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.CreateCommentTest" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="PARAMETERS" value="" />
@@ -128,7 +143,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Delete_comment.Test01" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Create_bid.Test01" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Test1" />
       <shortenClasspath name="NONE" />
       <extension name="coverage">
@@ -139,7 +154,7 @@
       </extension>
       <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="com.tvinh.test1" />
-      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.Delete_comment" />
+      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.Create_bid" />
       <option name="METHOD_NAME" value="Test01" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
@@ -155,7 +170,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetListAuctionTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Delete_comment" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Test1" />
       <shortenClasspath name="NONE" />
       <extension name="coverage">
@@ -166,7 +181,7 @@
       </extension>
       <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="com.tvinh.test1" />
-      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.GetListAuctionTest" />
+      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.Delete_comment" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="PARAMETERS" value="" />
@@ -239,9 +254,9 @@
       <list>
         <item itemvalue="Application.AutomationTesting" />
         <item itemvalue="TestNG.Delete_comment" />
+        <item itemvalue="TestNG.Create_bid.Test01" />
+        <item itemvalue="TestNG.CreateCommentTest" />
         <item itemvalue="TestNG.Read_new" />
-        <item itemvalue="TestNG.Delete_comment.Test01" />
-        <item itemvalue="TestNG.GetListAuctionTest" />
       </list>
     </recent_temporary>
   </component>
