@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4d0a700-e8f3-43e9-a7b6-ed0dae3ce70d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/tvinh/test1/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/tvinh/test1/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/SignUpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/SignUpTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +50,7 @@
       <recent name="com.tvinh.test1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AutomationTesting">
+  <component name="RunManager" selected="TestNG.GetListAuctionsByUser.TestCase01">
     <configuration name="AutomationTesting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.AutomationTesting" />
       <module name="Test1" />
@@ -99,7 +100,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetDetailsAutionTest.TestCase01" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GetListAuctionsByUser.TestCase01" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Test1" />
       <extension name="coverage">
         <pattern>
@@ -108,7 +109,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.tvinh.test1" />
-      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.GetDetailsAutionTest" />
+      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.GetListAuctionsByUser" />
       <option name="METHOD_NAME" value="TestCase01" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -137,11 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.GetListAuctionsByUser.TestCase01" />
         <item itemvalue="Application.AutomationTesting" />
         <item itemvalue="TestNG.EditTest.TestCase01" />
         <item itemvalue="TestNG.ContactUsTest.Test01" />
         <item itemvalue="TestNG.GetTotalLikeOfAuctionTest.TestCase01" />
-        <item itemvalue="TestNG.GetDetailsAutionTest.TestCase01" />
       </list>
     </recent_temporary>
   </component>

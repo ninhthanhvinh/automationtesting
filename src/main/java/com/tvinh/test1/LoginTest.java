@@ -167,8 +167,8 @@ public class LoginTest {
 
         JSONObject request = new JSONObject();
 
-        baseURI = AutomationTesting.baseuri;
-        //baseURI = "https://auctions-app-2.herokuapp.com/api";
+        //baseURI = AutomationTesting.baseuri;
+        baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         request.put("email", "ninhthanhvinh607@gmail.com");
         request.put("password", "12345678");
@@ -179,6 +179,8 @@ public class LoginTest {
                 post("/login");
 
         JsonPath jp = response.jsonPath();
+
+        System.out.println(response.getBody().asPrettyString());
         LinkedHashMap<String, Object> data = jp.get("data");
 
         return data.get("access_token").toString();

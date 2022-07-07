@@ -14,6 +14,7 @@ import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.*;
 import static org.testng.Assert.assertNotEquals;
+import static org.testng.AssertJUnit.assertEquals;
 
 public class SignUpTest {
     Map<String, Object> map = new HashMap<String, Object>();
@@ -189,11 +190,11 @@ public class SignUpTest {
 
         baseURI = AutomationTesting.baseuri;
 
-        //String pass = RandomStringUtils.randomAlphanumeric(8);
+        String pass = RandomStringUtils.randomAlphanumeric(8);
 
-        req.put("email", /*RandomStringUtils.randomAlphanumeric(10) +*/ "ntv@gmail.com");
-        req.put("password", /*pass*/ "123456");
-        req.put("re_pass", /*pass*/ "123456");
+        req.put("email", RandomStringUtils.randomAlphanumeric(10) + "@gmail.com");
+        req.put("password", pass);
+        req.put("re_pass", pass);
         req.put("address", RandomStringUtils.randomAlphanumeric(30));
         req.put("name", RandomStringUtils.randomAlphanumeric(10));
         req.put("phone", RandomStringUtils.randomNumeric(10));
@@ -204,7 +205,7 @@ public class SignUpTest {
         System.out.println(res.getBody().asString());
 
         JsonPath jpath = res.jsonPath();
-        assertNotEquals(jpath.getInt("code"), 1001);
+        assertEquals(jpath.getInt("code"), 1000);
     }
 
     public void call(){

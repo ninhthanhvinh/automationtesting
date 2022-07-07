@@ -43,7 +43,7 @@
                 <Label fx:id="apiLabel" text="Chọn API:" GridPane.rowIndex="1" />
             </children>
         </GridPane>
-        <Button onAction="#Test" text="Test" />
+        <Button onAction="#Clear" text="Test" />
         <TextArea fx:id="textAreaGUI" prefHeight="200.0" prefWidth="200.0" />
     </children>
 </VBox>
