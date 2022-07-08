@@ -27,10 +27,28 @@ public class GetListAuctionsByUser {
                 queryParam("index", "1").
                 queryParam("count", "2").
                 when().
-                get("/auctions/listAuctionsByStatus/{status}");
+                get("/auctions/listAuctionsByUser/{status}");
         System.out.println(response.getBody().asString());
         JsonPath jsonPath = response.jsonPath();
         assertEquals(jsonPath.getInt("code"), 1000);
+
+    }
+
+    @Test
+    public void TestCase02(){
+        //baseURI = AutomationTesting.baseuri;
+        baseURI = "https://auctions-app-2.herokuapp.com/api";
+
+        Response response = given().
+                contentType(ContentType.JSON).with().
+                pathParam("status", 1).
+                queryParam("index", "1").
+                queryParam("count", "2").
+                when().
+                get("/auctions/listAuctionsByUser/{status}");
+        System.out.println(response.getBody().asString());
+        JsonPath jsonPath = response.jsonPath();
+        assertEquals(jsonPath.getInt("code"), 1004);
 
     }
 

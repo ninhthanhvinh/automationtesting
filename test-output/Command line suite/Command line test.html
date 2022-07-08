@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Command line test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jul 04 10:23:42 ICT 2022</td>
+<td>Started on:</td><td>Fri Jul 08 17:32:10 ICT 2022</td>
 </tr>
-<tr><td>Total time:</td><td>2 seconds (2196 ms)</td>
+<tr><td>Total time:</td><td>13 seconds (13926 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,223 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.tvinh.test1.AuctionCreateTest.TestCase04()'><b>TestCase04</b><br>Test class: com.tvinh.test1.AuctionCreateTest</td>
+<td><div><pre>io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
+	at json.path@5.1.1/io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
+	at json.path@5.1.1/io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
+	at json.path@5.1.1/io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
+	at json.path@5.1.1/io.restassured.path.json.JsonPath.get(JsonPath.java:202)
+	at json.path@5.1.1/io.restassured.path.json.JsonPath.getInt(JsonPath.java:237)
+	at com.tvinh.test1/com.tvinh.test1.AuctionCreateTest.TestCase04(AuctionCreateTest.java:165)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.tvinh.test1/com.tvinh.test1.AuctionCreateTest.call(AuctionCreateTest.java:172)
+	at com.tvinh.test1/com.tvinh.test1.Controller.setApiChoice(Controller.java:82)
+	at javafx.base@18/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@18/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at javafx.base@18/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at javafx.base@18/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@18/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@18/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@18/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@18/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@18/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@18/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@18/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@18/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@18/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@18/javafx.scene.Node.fireEvent(Node.java:8797)
+	at javafx.controls@18/javafx.scene.control.ChoiceBox$4.invalidated(ChoiceBox.java:336)
+	at javafx.base@18/javafx.beans.property.ObjectPropertyBase.markInvalid(ObjectPropertyBase.java:112)
+	at javafx.base@18/javafx.beans.property.ObjectPropertyBase.set(ObjectPropertyBase.java:147)
+	at javafx.controls@18/javafx.scene.control.ChoiceBox.setValue(ChoiceBox.java:345)
+	at javafx.controls@18/javafx.scene.control.ChoiceBox.lambda$new$1(ChoiceBox.java:197)
+	at javafx.base@18/com.sun.javafx.binding.ExpressionHelper$SingleChange.fireValueChangedEvent(ExpressionHelper.java:181)
+	at javafx.base@18/com.sun.javafx.binding.ExpressionHelper.fireValueChangedEvent(ExpressionHelper.java:80)
+	at javafx.base@18/javafx.beans.property.ReadOnlyObjectPropertyBase.fireValueChangedEvent(ReadOnlyObjectPropertyBase.java:80)
+	at javafx.base@18/javafx.beans.property.ReadOnlyObjectWrapper.fireValueChangedEvent(ReadOnlyObjectWrapper.java:102)
+	at javafx.base@18/javafx.beans.property.ObjectPropertyBase.markInvalid(ObjectPropertyBase.java:113)
+	at javafx.base@18/javafx.beans.property.ObjectPropertyBase.set(ObjectPropertyBase.java:147)
+	at javafx.controls@18/javafx.scene.control.SelectionModel.setSelectedItem(SelectionModel.java:105)
+	at javafx.controls@18/javafx.scene.control.SingleSelectionModel.updateSelectedIndex(SingleSelectionModel.java:223)
+	at javafx.controls@18/javafx.scene.control.SingleSelectionModel.select(SingleSelectionModel.java:149)
+	at javafx.controls@18/javafx.scene.control.ChoiceBox$ChoiceBoxSelectionModel.select(ChoiceBox.java:589)
+	at javafx.controls@18/javafx.scene.control.skin.ChoiceBoxSkin.lambda$addPopupItem$7(ChoiceBoxSkin.java:390)
+	at javafx.base@18/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@18/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at javafx.base@18/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at javafx.base@18/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@18/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@18/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@18/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@18/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.controls@18/javafx.scene.control.MenuItem.fire(MenuItem.java:459)
+	at javafx.controls@18/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.doSelect(ContextMenuContent.java:1385)
+	at javafx.controls@18/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.lambda$createChildren$12(ContextMenuContent.java:1338)
+	at javafx.base@18/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@18/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@18/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at javafx.base@18/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at javafx.base@18/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@18/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@18/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@18/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@18/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@18/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@18/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@18/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@18/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@18/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@18/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@18/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@18/javafx.scene.Scene$MouseHandler.process(Scene.java:3881)
+	at javafx.graphics@18/javafx.scene.Scene.processMouseEvent(Scene.java:1874)
+	at javafx.graphics@18/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2607)
+	at javafx.graphics@18/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@18/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at javafx.graphics@18/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@18/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@18/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@18/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@18/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@18/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@18/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading &apos;&lt;&apos;, no possible valid JSON value or punctuation could be recognized.
+	at groovy.json.JsonLexer.nextToken(JsonLexer.java:86)
+	at groovy.json.JsonLexer$nextToken.call(Unknown Source)
+	at json.path@5.1.1/io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:97)
+	at io.restassured.internal.path.json.ConfigurableJsonSlurper$parse.callCurrent(Unknown Source)
+	at json.path@5.1.1/io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)
+	at json.path@5.1.1/io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
+	at json.path@5.1.1/io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
+	... 101 more
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace855929240", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace855929240'><pre>io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
+	at json.path@5.1.1/io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
+	at json.path@5.1.1/io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
+	at json.path@5.1.1/io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
+	at json.path@5.1.1/io.restassured.path.json.JsonPath.get(JsonPath.java:202)
+	at json.path@5.1.1/io.restassured.path.json.JsonPath.getInt(JsonPath.java:237)
+	at com.tvinh.test1/com.tvinh.test1.AuctionCreateTest.TestCase04(AuctionCreateTest.java:165)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng@7.6.0/org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng@7.6.0/org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng@7.6.0/org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng@7.6.0/org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng@7.6.0/org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng@7.6.0/org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng@7.6.0/org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng@7.6.0/org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng@7.6.0/org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng@7.6.0/org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng@7.6.0/org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng@7.6.0/org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng@7.6.0/org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng@7.6.0/org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng@7.6.0/org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng@7.6.0/org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng@7.6.0/org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng@7.6.0/org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng@7.6.0/org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng@7.6.0/org.testng.TestNG.run(TestNG.java:1067)
+	at com.tvinh.test1/com.tvinh.test1.AuctionCreateTest.call(AuctionCreateTest.java:172)
+	at com.tvinh.test1/com.tvinh.test1.Controller.setApiChoice(Controller.java:82)
+	at javafx.base@18/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@18/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at javafx.base@18/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at javafx.base@18/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@18/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@18/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@18/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@18/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@18/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@18/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@18/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@18/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@18/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@18/javafx.scene.Node.fireEvent(Node.java:8797)
+	at javafx.controls@18/javafx.scene.control.ChoiceBox$4.invalidated(ChoiceBox.java:336)
+	at javafx.base@18/javafx.beans.property.ObjectPropertyBase.markInvalid(ObjectPropertyBase.java:112)
+	at javafx.base@18/javafx.beans.property.ObjectPropertyBase.set(ObjectPropertyBase.java:147)
+	at javafx.controls@18/javafx.scene.control.ChoiceBox.setValue(ChoiceBox.java:345)
+	at javafx.controls@18/javafx.scene.control.ChoiceBox.lambda$new$1(ChoiceBox.java:197)
+	at javafx.base@18/com.sun.javafx.binding.ExpressionHelper$SingleChange.fireValueChangedEvent(ExpressionHelper.java:181)
+	at javafx.base@18/com.sun.javafx.binding.ExpressionHelper.fireValueChangedEvent(ExpressionHelper.java:80)
+	at javafx.base@18/javafx.beans.property.ReadOnlyObjectPropertyBase.fireValueChangedEvent(ReadOnlyObjectPropertyBase.java:80)
+	at javafx.base@18/javafx.beans.property.ReadOnlyObjectWrapper.fireValueChangedEvent(ReadOnlyObjectWrapper.java:102)
+	at javafx.base@18/javafx.beans.property.ObjectPropertyBase.markInvalid(ObjectPropertyBase.java:113)
+	at javafx.base@18/javafx.beans.property.ObjectPropertyBase.set(ObjectPropertyBase.java:147)
+	at javafx.controls@18/javafx.scene.control.SelectionModel.setSelectedItem(SelectionModel.java:105)
+	at javafx.controls@18/javafx.scene.control.SingleSelectionModel.updateSelectedIndex(SingleSelectionModel.java:223)
+	at javafx.controls@18/javafx.scene.control.SingleSelectionModel.select(SingleSelectionModel.java:149)
+	at javafx.controls@18/javafx.scene.control.ChoiceBox$ChoiceBoxSelectionModel.select(ChoiceBox.java:589)
+	at javafx.controls@18/javafx.scene.control.skin.ChoiceBoxSkin.lambda$addPopupItem$7(ChoiceBoxSkin.java:390)
+	at javafx.base@18/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@18/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at javafx.base@18/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at javafx.base@18/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@18/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@18/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@18/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@18/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.controls@18/javafx.scene.control.MenuItem.fire(MenuItem.java:459)
+	at javafx.controls@18/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.doSelect(ContextMenuContent.java:1385)
+	at javafx.controls@18/com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer.lambda$createChildren$12(ContextMenuContent.java:1338)
+	at javafx.base@18/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@18/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@18/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:234)
+	at javafx.base@18/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at javafx.base@18/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@18/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@18/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@18/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@18/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@18/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@18/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@18/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@18/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@18/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@18/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@18/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@18/javafx.scene.Scene$MouseHandler.process(Scene.java:3881)
+	at javafx.graphics@18/javafx.scene.Scene.processMouseEvent(Scene.java:1874)
+	at javafx.graphics@18/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2607)
+	at javafx.graphics@18/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@18/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at javafx.graphics@18/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@18/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@18/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@18/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@18/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@18/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at javafx.graphics@18/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:184)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: groovy.json.JsonException: Lexing failed on line: 1, column: 1, while reading &apos;&lt;&apos;, no possible valid JSON value or punctuation could be recognized.
+	at groovy.json.JsonLexer.nextToken(JsonLexer.java:86)
+	at groovy.json.JsonLexer$nextToken.call(Unknown Source)
+	at json.path@5.1.1/io.restassured.internal.path.json.ConfigurableJsonSlurper.parse(ConfigurableJsonSlurper.groovy:97)
+	at io.restassured.internal.path.json.ConfigurableJsonSlurper$parse.callCurrent(Unknown Source)
+	at json.path@5.1.1/io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:83)
+	at json.path@5.1.1/io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
+	at json.path@5.1.1/io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
+	... 101 more
+</pre></div></td>
+<td>1</td>
+<td>com.tvinh.test1.AuctionCreateTest@7171e453</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,10 +293,20 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.tvinh.test1.LogOutTest.Test01()'><b>Test01</b><br>Test class: com.tvinh.test1.LogOutTest</td>
+<td title='com.tvinh.test1.AuctionCreateTest.TestCase01()'><b>TestCase01</b><br>Test class: com.tvinh.test1.AuctionCreateTest</td>
 <td></td>
-<td>2</td>
-<td>com.tvinh.test1.LogOutTest@494708</td></tr>
+<td>6</td>
+<td>com.tvinh.test1.AuctionCreateTest@7171e453</td></tr>
+<tr>
+<td title='com.tvinh.test1.AuctionCreateTest.TestCase02()'><b>TestCase02</b><br>Test class: com.tvinh.test1.AuctionCreateTest</td>
+<td></td>
+<td>3</td>
+<td>com.tvinh.test1.AuctionCreateTest@7171e453</td></tr>
+<tr>
+<td title='com.tvinh.test1.AuctionCreateTest.TestCase03()'><b>TestCase03</b><br>Test class: com.tvinh.test1.AuctionCreateTest</td>
+<td></td>
+<td>3</td>
+<td>com.tvinh.test1.AuctionCreateTest@7171e453</td></tr>
 </table><p>
 </body>
 </html>

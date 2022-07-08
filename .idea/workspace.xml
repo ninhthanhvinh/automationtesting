@@ -6,7 +6,25 @@
   <component name="ChangeListManager">
     <list default="true" id="e4d0a700-e8f3-43e9-a7b6-ed0dae3ce70d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/ContactUsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/ContactUsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/AuctionCreateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/AuctionCreateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListAuctionByTypeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListAuctionByTypeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListAuctionsByUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListAuctionsByUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListLikesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListLikesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/Command line suite/Command line test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/Command line suite/Command line test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/Command line suite/Command line test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/Command line suite/Command line test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/Command line suite/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/Command line suite/testng-failed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/Command line suite/classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Command line suite/classes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/Command line suite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Command line suite/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/Command line suite/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Command line suite/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/Command line suite/methods-alphabetical.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Command line suite/methods-alphabetical.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/Command line suite/methods-not-run.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Command line suite/methods-not-run.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/Command line suite/methods.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Command line suite/methods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/Command line suite/testng.xml.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Command line suite/testng.xml.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/Command line suite/toc.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Command line suite/toc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/testng-failed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/testng-results.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +67,8 @@
       <recent name="com.tvinh.test1" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ContactUsTest.Test07">
-    <configuration name="ContactUsTest.Test02" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.GetListAuctionByTypeTest.TestCase01">
+    <configuration name="AuctionCreateTest.TestCase04" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Test1" />
       <extension name="coverage">
         <pattern>
@@ -59,8 +77,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.tvinh.test1" />
-      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.ContactUsTest" />
-      <option name="METHOD_NAME" value="Test02" />
+      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.AuctionCreateTest" />
+      <option name="METHOD_NAME" value="TestCase04" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -68,7 +86,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactUsTest.Test04" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GetListAuctionByTypeTest.TestCase01" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Test1" />
       <extension name="coverage">
         <pattern>
@@ -77,8 +95,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.tvinh.test1" />
-      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.ContactUsTest" />
-      <option name="METHOD_NAME" value="Test04" />
+      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.GetListAuctionByTypeTest" />
+      <option name="METHOD_NAME" value="TestCase01" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -86,7 +104,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactUsTest.Test05" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GetListAuctionsByUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Test1" />
       <extension name="coverage">
         <pattern>
@@ -95,8 +113,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.tvinh.test1" />
-      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.ContactUsTest" />
-      <option name="METHOD_NAME" value="Test05" />
+      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.GetListAuctionsByUser" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetListAuctionsByUser.TestCase01" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Test1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tvinh.test1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tvinh.test1" />
+      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.GetListAuctionsByUser" />
+      <option name="METHOD_NAME" value="TestCase01" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -104,7 +139,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContactUsTest.Test06" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GetListAuctionsByUser.TestCase02" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Test1" />
       <extension name="coverage">
         <pattern>
@@ -113,26 +148,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.tvinh.test1" />
-      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.ContactUsTest" />
-      <option name="METHOD_NAME" value="Test06" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContactUsTest.Test07" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Test1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tvinh.test1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.tvinh.test1" />
-      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.ContactUsTest" />
-      <option name="METHOD_NAME" value="Test07" />
+      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.GetListAuctionsByUser" />
+      <option name="METHOD_NAME" value="TestCase02" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -142,11 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ContactUsTest.Test07" />
-        <item itemvalue="TestNG.ContactUsTest.Test02" />
-        <item itemvalue="TestNG.ContactUsTest.Test06" />
-        <item itemvalue="TestNG.ContactUsTest.Test05" />
-        <item itemvalue="TestNG.ContactUsTest.Test04" />
+        <item itemvalue="TestNG.GetListAuctionByTypeTest.TestCase01" />
+        <item itemvalue="TestNG.GetListAuctionsByUser.TestCase02" />
+        <item itemvalue="TestNG.GetListAuctionsByUser" />
+        <item itemvalue="TestNG.GetListAuctionsByUser.TestCase01" />
+        <item itemvalue="TestNG.AuctionCreateTest.TestCase04" />
       </list>
     </recent_temporary>
   </component>
@@ -171,20 +188,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tvinh/test1/CreateItemTest.java</url>
-          <line>21</line>
-          <properties class="com.tvinh.test1.CreateItemTest" method="TestCase01">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
