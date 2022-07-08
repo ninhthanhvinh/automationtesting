@@ -28,17 +28,20 @@ public class CreateItemTest {
         request.put("starting_price", 1);
         request.put("brand_id", 5);
         request.put("description", "Hien sỉu dep trai, thanh ly gap");
-        request.put("series", "13HCAW5861");
+        request.put("series", "23412h");
         request.put("images", null);
 
         LoginTest loginTest = new LoginTest();
         String accessToken = "bearer" + loginTest.getAccessToken();
 
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
+
         Response response = given().
                             header("Authorization", accessToken).
                             contentType(ContentType.JSON).
                             with().
-                            pathParam("auctionId", "254").
+                            pathParam("auctionId", id).
                             with().
                             body(request.toJSONString()).
                             when().
