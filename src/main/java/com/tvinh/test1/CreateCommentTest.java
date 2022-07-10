@@ -32,15 +32,16 @@ public class CreateCommentTest {
         LoginTest loginTest = new LoginTest();
         String accessToken = "bearer" + loginTest.getAccessToken();
 
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
+
         Response response = given().
                 header("Authorization", accessToken).
                 contentType(ContentType.JSON).
                 with().
-                pathParam("auctionId", "255").
-                queryParam("content", "Hien dep trai").
-                queryParam("comment_last_id", 0).
-                with().
-                body(request.toJSONString()).
+                pathParam("auctionId", id).
+                queryParam("content", "Vinh dep trai").
+                queryParam("comment_last_id", 2).
                 when().
                 post("/comments/create/{auctionId}");
         System.out.println(response.getBody().asString());

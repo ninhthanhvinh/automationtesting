@@ -41,11 +41,14 @@ public class EditAuctionTest {
         LoginTest loginTest = new LoginTest();
         String accessToken = "bearer" + loginTest.getAccessToken();
 
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
+
         Response response = given().
                 header("Authorization", accessToken).
                 contentType(ContentType.JSON).
                 with().
-                pathParam("auctionID","255").
+                pathParam("auctionID",id).
                 body(request.toJSONString()).
                 when().
                 post("/auctions/edit/{auctionID}");

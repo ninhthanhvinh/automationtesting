@@ -49,14 +49,17 @@ public class Read_notifications {
         LoginTest loginTest = new LoginTest();
         String ACCESS_TOKEN = loginTest.getAccessToken();
 
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
+
         Response res = given().header("Authorization", "bearer" + ACCESS_TOKEN).
                 contentType(JSON).
                 with().
-                pathParam("auctionDenyld", 2).
+                pathParam("auctionDenyld", id).
                 when().
                 get("/notifications/read/{auctionDenyld}");
         res.then().statusCode(200);
-        System.out.println(res.getStatusCode()); //code = 404
+
         JsonPath jpath = res.jsonPath();
         LinkedHashMap<String, String> data = jpath.get("data");
         System.out.println(data);

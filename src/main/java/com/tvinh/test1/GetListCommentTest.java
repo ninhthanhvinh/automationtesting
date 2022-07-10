@@ -20,10 +20,13 @@ public class GetListCommentTest {
         LoginTest loginTest = new LoginTest();
         String accessToken = "bearer" + loginTest.getAccessToken();
 
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
+
         Response response = given().
                 contentType(ContentType.JSON).with().
                 header("Authorization", accessToken).
-                pathParam("auctionId", "255").
+                pathParam("auctionId", id).
                 queryParam("index", "1").
                 queryParam("count", "2").
                 when().

@@ -26,11 +26,14 @@ public class Accept_max_bid {
         LoginTest loginTest = new LoginTest();
         String ACCESS_TOKEN = loginTest.getAccessToken();
 
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
+
         Response res = given().
                             header("Authorization", "bearer" + ACCESS_TOKEN).
                             contentType(ContentType.JSON).
                         with().
-                            pathParam("auctionId", 255).
+                            pathParam("auctionId", id).
                             queryParam("selling_info", "sell baby Vinh").
                         when().
                             post("/accept/{auctionId}");

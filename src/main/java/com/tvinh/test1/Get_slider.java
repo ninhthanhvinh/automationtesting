@@ -4,10 +4,9 @@ import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.*;
 import static org.testng.AssertJUnit.assertEquals;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.LinkedHashMap;
 
-import org.json.simple.JSONObject;
+import io.restassured.http.ContentType;
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
 import org.testng.annotations.Test;
@@ -16,18 +15,16 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
 public class Get_slider {
-    Map<String, Object> map = new HashMap<String, Object>();
-    private static final String JSON = "application/json";
-
     @Test
     public void Test01() {
-        JSONObject request = new JSONObject();
 
         baseURI = "https://auction-app3.herokuapp.com/api";
 
-        Response res = given().get("/slider");
+        Response res = given().contentType(ContentType.JSON).
+                        when().get("/slider");
         res.then().statusCode(200);
-        System.out.println(res.getBody().toString());
+
+        System.out.println(res.getBody().asString());
 
         JsonPath jpath = res.jsonPath();
         assertEquals(jpath.getInt("code"), 1000);

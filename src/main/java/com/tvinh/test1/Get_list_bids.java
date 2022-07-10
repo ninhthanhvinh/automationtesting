@@ -4,11 +4,8 @@ import static io.restassured.RestAssured.baseURI;
 import static org.testng.Assert.assertEquals;
 import static io.restassured.RestAssured.*;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.Map;
 
-import org.json.simple.JSONObject;
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
 import org.testng.annotations.Test;
@@ -18,20 +15,21 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
 public class Get_list_bids {
-    Map<String, Object> map = new HashMap<String, Object>();
 
     private final String JSON = "application/json";
 
     @Test
     public void Test01() {
-        JSONObject request = new JSONObject();
 
         baseURI = "https://auction-app3.herokuapp.com/api";
+
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
 
         Response res = given().
                 contentType(ContentType.JSON).
                 with().
-                pathParam("auctionId", 1).
+                pathParam("auctionId", id).
                 queryParam("index", "1").
                 queryParam("count", "2").
                 when().
@@ -45,6 +43,30 @@ public class Get_list_bids {
         assertEquals(jpath.getInt("code"), 1000);
     }
 
+    @Test
+    public void Test02() {
+
+        baseURI = "https://auction-app3.herokuapp.com/api";
+
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
+
+        Response res = given().
+                contentType(ContentType.JSON).
+                with().
+                pathParam("auctionId", id).
+                queryParam("index", "1000").
+                queryParam("count", "2000").
+                when().
+                get("/bids/{auctionId}");
+        res.then().statusCode(200);
+
+        JsonPath jpath = res.jsonPath();
+        LinkedHashMap<String, String> data = jpath.get("data");
+        System.out.println(data);
+
+        assertEquals(jpath.getInt("code"), 1000);
+    }
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();

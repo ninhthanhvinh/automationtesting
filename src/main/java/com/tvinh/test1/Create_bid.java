@@ -21,17 +21,20 @@ public class Create_bid {
 
     @Test
     public void Test01() {
-        baseURI = "https://auction-app3.herokuapp.com/api";
+        baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         LoginTest loginTest = new LoginTest();
         String ACCESS_TOKEN = loginTest.getAccessToken();
+
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
 
         Response res = given().
                             header("Authorization", "bearer" + ACCESS_TOKEN).
                             contentType(JSON).
                         with().
-                            pathParam("auctionId", 255).
-                            queryParam("price", 1).
+                            pathParam("auctionId", id).
+                            queryParam("price", 111000000).
                             queryParam("bid_last_id", "1234").
                         when().
                             post("/bids/create/{auctionId}");

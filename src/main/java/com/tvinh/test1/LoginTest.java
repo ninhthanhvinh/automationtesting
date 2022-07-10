@@ -33,11 +33,14 @@ public class LoginTest {
         //baseURI = AutomationTesting.baseuri;
         baseURI = "https://auctions-app-2.herokuapp.com/api";
 
-        request.put("email", "ninhthanhvinh607@gmail.com");
-        request.put("password", "12345678");
+        //request.put("email", "ninhvinhdeptrai@gmail.com");
+        //request.put("password", "vinhdeptrai");
 
         Response response = given().contentType(JSON).
-                body(request.toJSONString()).
+                //body(request.toJSONString()).
+                with().
+                queryParam("email", "ninhvinhdeptrai@gmail.com").
+                queryParam("password", "vinhdeptrai").
                 when().
                 post("/login");
         System.out.println(response.getBody().asString());

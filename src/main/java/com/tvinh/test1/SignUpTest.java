@@ -14,6 +14,7 @@ import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.*;
 import static org.testng.Assert.assertNotEquals;
+import static org.testng.AssertJUnit.assertEquals;
 
 public class SignUpTest {
     Map<String, Object> map = new HashMap<String, Object>();
@@ -28,10 +29,10 @@ public class SignUpTest {
 
         baseURI = "https://auction-app3.herokuapp.com/api";
 
-        req.put("email", "ninhthanhvinh@gmail.com");
-        req.put("password", "123456");
-        req.put("re_pass", "123456");
-        req.put("address", "ThuyDan");
+        req.put("email", "ninhvinhdeptrai@gmail.com");
+        req.put("password", "vinhdeptrai");
+        req.put("re_pass", "vinhdeptrai");
+        req.put("address", null);
         req.put("name", "vinh");
         req.put("phone", "090");
         req.put("avatar", null);

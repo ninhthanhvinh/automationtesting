@@ -3,6 +3,7 @@ package com.tvinh.test1;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.json.simple.JSONObject;
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
@@ -24,11 +25,11 @@ public class CreateItemTest {
         baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         JSONObject request = new JSONObject();
-        request.put("name", "Hien dep trai vcl");
+        request.put("name", RandomStringUtils.randomAlphanumeric(10));
         request.put("starting_price", 1);
         request.put("brand_id", 5);
-        request.put("description", "Hien sỉu dep trai, thanh ly gap");
-        request.put("series", "23412h");
+        request.put("description", RandomStringUtils.randomAlphanumeric(10));
+        request.put("series", RandomStringUtils.randomAlphanumeric(10));
         request.put("images", null);
 
         LoginTest loginTest = new LoginTest();

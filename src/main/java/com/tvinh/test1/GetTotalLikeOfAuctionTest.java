@@ -17,17 +17,20 @@ public class GetTotalLikeOfAuctionTest {
     public void TestCase01(){
         //baseURI = AutomationTesting.baseuri;
         baseURI = "https://auctions-app-2.herokuapp.com/api";
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
 
         Response response = given().
                 contentType(ContentType.JSON).
-                pathParam("auctionId", "255").
+                with().
+                pathParam("auctionId", id).
                 when().get("/totalLikes/{auctionId}");
         System.out.println(response.getBody().asString());
         JsonPath jsonPath = response.jsonPath();
         assertEquals(jsonPath.getInt("code"), 1000);
         assertNotNull(jsonPath.getJsonObject("data"));
-
     }
+
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();

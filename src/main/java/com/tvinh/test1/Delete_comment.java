@@ -27,16 +27,14 @@ public class Delete_comment {
         LoginTest loginTest = new LoginTest();
         String ACCESS_TOKEN = loginTest.getAccessToken();
 
-        JSONObject request = new JSONObject();
-        //request.put("access_token", ACCESS_TOKEN);
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
 
         Response res = given().
                             header("Authorization", "bearer" + ACCESS_TOKEN).
                             contentType(ContentType.JSON).
                         with().
-                            pathParam("commentId", "255").
-                        with().
-                            body(request.toJSONString()).
+                            pathParam("commentId", id).
                         when().
                             delete("/comments/{commentId}");
         res.then().statusCode(204).log().all();

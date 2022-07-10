@@ -57,11 +57,14 @@ public class Like_auction {
         LoginTest loginTest = new LoginTest();
         String ACCESS_TOKEN = loginTest.getAccessToken();
 
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
+
         Response res = given().
                 header("Authorization", "bearer" + ACCESS_TOKEN).
                 contentType(JSON).
                 with().
-                pathParam("auctionId", 2).
+                pathParam("auctionId", id).
                 when().
                 post("/updateLike/{auctionId}");
 
