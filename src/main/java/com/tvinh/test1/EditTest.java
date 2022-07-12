@@ -56,6 +56,135 @@ public class EditTest {
 
     }
 
+    @Test
+    public void TestCase02() {
+
+        JSONObject request = new JSONObject();
+
+        baseURI = AutomationTesting.baseuri;
+
+        LoginTest loginTest = new LoginTest();
+
+        String ACCESS_TOKEN = loginTest.getAccessToken();
+
+        request.put("email", "ninhvinh1@gmail.com");
+        request.put("password", "123456");
+        request.put("re_pass", "123456");
+        request.put("address", "MyAddress");
+        request.put("name", "MyName");
+        request.put("phone", "09090909090");
+        request.put("avatar", null);
+
+        Response response = given().
+                contentType(JSON).
+                body(request.toJSONString()).
+                when().
+                post("/edit");
+        assertEquals(response.getStatusCode(), 302);
+    }
+
+    @Test
+    public void TestCase03() {
+
+        JSONObject request = new JSONObject();
+
+        baseURI = AutomationTesting.baseuri;
+
+        LoginTest loginTest = new LoginTest();
+
+        String ACCESS_TOKEN = loginTest.getAccessToken();
+
+        request.put("email", "ninhvinh1@gmail.com");
+        request.put("password", "123456");
+        request.put("re_pass", "123456");
+        request.put("address", "MyAddress");
+        request.put("name", "MyName");
+        request.put("phone", null);
+        request.put("avatar", null);
+
+        Response response = given().
+                header("Authorization","Bearer" + ACCESS_TOKEN).
+                contentType(JSON).
+                body(request.toJSONString()).
+                when().
+                post("/edit");
+
+        System.out.println(response.getBody().asString());
+
+        JsonPath jpath = response.jsonPath();
+        int code = jpath.getInt("code");
+        assertEquals(code, 1001);
+
+    }
+
+    @Test
+    public void TestCase05() {
+
+        JSONObject request = new JSONObject();
+
+        baseURI = AutomationTesting.baseuri;
+
+        LoginTest loginTest = new LoginTest();
+
+        String ACCESS_TOKEN = loginTest.getAccessToken();
+
+        request.put("email", null);
+        request.put("password", "123456");
+        request.put("re_pass", "123456");
+        request.put("address", "MyAddress");
+        request.put("name", "MyName");
+        request.put("phone", "09090909090");
+        request.put("avatar", null);
+
+        Response response = given().
+                header("Authorization","Bearer" + ACCESS_TOKEN).
+                contentType(JSON).
+                body(request.toJSONString()).
+                when().
+                post("/edit");
+
+        System.out.println(response.getBody().asString());
+
+        JsonPath jpath = response.jsonPath();
+        int code = jpath.getInt("code");
+        assertEquals(code, 1001);
+
+    }
+
+    @Test
+    public void TestCase04() {
+
+        JSONObject request = new JSONObject();
+
+        baseURI = AutomationTesting.baseuri;
+
+        LoginTest loginTest = new LoginTest();
+
+        String ACCESS_TOKEN = loginTest.getAccessToken();
+
+        request.put("email", null);
+        request.put("password", null);
+        request.put("re_pass", "123456");
+        request.put("address", "MyAddress");
+        request.put("name", "MyName");
+        request.put("phone", "09090909090");
+        request.put("avatar", null);
+
+        Response response = given().
+                header("Authorization","Bearer" + ACCESS_TOKEN).
+                contentType(JSON).
+                body(request.toJSONString()).
+                when().
+                post("/edit");
+
+        System.out.println(response.getBody().asString());
+
+        JsonPath jpath = response.jsonPath();
+        int code = jpath.getInt("code");
+        assertEquals(code, 1001);
+
+    }
+
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();

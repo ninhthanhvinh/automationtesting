@@ -166,32 +166,32 @@ public class SignUpTest {
 
         baseURI = "https://auction-app3.herokuapp.com/api";
 
-        req.put("email", "ninhthanhvinh@gmail.com");
-        req.put("password", "123456");
-        req.put("re_pass", "123456");
+        req.put("email", "ninhthanhvinh607@gmail.com");
+        req.put("password", "12345678");
+        req.put("re_pass", "12345678");
         req.put("address", "ThuyDan");
         req.put("name", "vinh");
-        req.put("phone", "");
+        req.put("phone", "090");
         req.put("avatar", null);
 
         Response res = given().contentType(JSON).body(req.toJSONString()).when().post("/signup");
 
         System.out.println(res.getBody().asString());
 
-        JsonPath jpath = res.jsonPath();
-        assertNotEquals(jpath.getInt("code"), 1000);
-    }
+    JsonPath jpath = res.jsonPath();
+    assertNotEquals(jpath.getInt("code"), 1000);
+}
 
     @Test
     public void Test08() {
 
         JSONObject req = new JSONObject();
 
-        baseURI = AutomationTesting.baseuri;
-
+        //baseURI = AutomationTesting.baseuri;
+        baseURI = "https://auctions-app-2.herokuapp.com/api";
         //String pass = RandomStringUtils.randomAlphanumeric(8);
 
-        req.put("email", /*RandomStringUtils.randomAlphanumeric(10) +*/ "ntv@gmail.com");
+        req.put("email", RandomStringUtils.randomAlphanumeric(10) + "ntv@gmail.com");
         req.put("password", /*pass*/ "123456");
         req.put("re_pass", /*pass*/ "123456");
         req.put("address", RandomStringUtils.randomAlphanumeric(30));
@@ -206,6 +206,8 @@ public class SignUpTest {
         JsonPath jpath = res.jsonPath();
         assertNotEquals(jpath.getInt("code"), 1001);
     }
+
+
 
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();

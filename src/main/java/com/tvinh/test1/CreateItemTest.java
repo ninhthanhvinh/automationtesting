@@ -25,10 +25,10 @@ public class CreateItemTest {
 
         JSONObject request = new JSONObject();
         request.put("name", "Hien dep trai vcl");
-        request.put("starting_price", 1);
+        request.put("starting_price", 10000);
         request.put("brand_id", 5);
         request.put("description", "Hien sỉu dep trai, thanh ly gap");
-        request.put("series", "23412h");
+        request.put("series", "23412hab");
         request.put("images", null);
 
         LoginTest loginTest = new LoginTest();

@@ -3,6 +3,7 @@ package com.tvinh.test1;
 import com.tvinh.test1.AutomationTesting;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.json.simple.JSONObject;
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
@@ -33,8 +34,8 @@ public class LoginTest {
         //baseURI = AutomationTesting.baseuri;
         baseURI = "https://auctions-app-2.herokuapp.com/api";
 
-        request.put("email", "ninhthanhvinh607@gmail.com");
-        request.put("password", "12345678");
+        request.put("email", RandomStringUtils.randomAlphanumeric(257));
+        request.put("password", "123456");
 
         Response response = given().contentType(JSON).
                 body(request.toJSONString()).
@@ -43,7 +44,7 @@ public class LoginTest {
         System.out.println(response.getBody().asString());
         JsonPath jpath = response.jsonPath();
         int code = jpath.getInt("code");
-        assertEquals(code, 1000);
+        assertEquals(code, 1001);
     }
     @Test
     public void Test02() {
@@ -76,7 +77,7 @@ public class LoginTest {
         baseURI = AutomationTesting.baseuri;
 
         request.put("email", "admin@gmail.com");
-        request.put("password", "123456");
+        request.put("password", RandomStringUtils.randomAlphanumeric(257));
 
         Response response = given().contentType(JSON).
                 body(request.toJSONString()).
@@ -154,6 +155,29 @@ public class LoginTest {
         assertEquals(code, 1001);
     }
 
+    @Test
+    public void Test07() {
+
+        Map<String, Object> map = new HashMap<String, Object>();
+
+        JSONObject request = new JSONObject();
+
+        //baseURI = AutomationTesting.baseuri;
+        baseURI = "https://auctions-app-2.herokuapp.com/api";
+
+        request.put("email", "rrvAvCOOODntv@gmail.com");
+        request.put("password", "12345678");
+
+        Response response = given().contentType(JSON).
+                body(request.toJSONString()).
+                when().
+                post("/login");
+        System.out.println(response.getBody().asString());
+        JsonPath jpath = response.jsonPath();
+        int code = jpath.getInt("code");
+        assertEquals(code, 1000);
+    }
+
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();
@@ -170,7 +194,7 @@ public class LoginTest {
         //baseURI = AutomationTesting.baseuri;
         baseURI = "https://auctions-app-2.herokuapp.com/api";
 
-        request.put("email", "ninhthanhvinh607@gmail.com");
+        request.put("email", "rrvAvCOOODntv@gmail.com");
         request.put("password", "12345678");
 
         Response response = given().contentType(JSON).

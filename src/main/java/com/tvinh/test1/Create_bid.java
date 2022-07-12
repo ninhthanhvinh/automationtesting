@@ -21,7 +21,7 @@ public class Create_bid {
 
     @Test
     public void Test01() {
-        baseURI = "https://auction-app3.herokuapp.com/api";
+        baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         LoginTest loginTest = new LoginTest();
         String ACCESS_TOKEN = loginTest.getAccessToken();
