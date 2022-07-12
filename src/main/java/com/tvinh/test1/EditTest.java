@@ -31,8 +31,8 @@ public class EditTest {
 
         String ACCESS_TOKEN = loginTest.getAccessToken();
 
-        request.put("email", "ninhvinhdeptrai@gmail.com");
-        request.put("password", "vinhdeptrai");
+        request.put("email", "ninhvinhdeptrai1@gmail.com");
+        request.put("password", "vinhdeptrai1");
         request.put("re_pass", "vinhdeptrai");
         request.put("address", null);
         request.put("name", "MyName");

@@ -188,11 +188,12 @@ public class SignUpTest {
 
         JSONObject req = new JSONObject();
 
-        baseURI = AutomationTesting.baseuri;
+        //baseURI = AutomationTesting.baseuri;
+        baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         //String pass = RandomStringUtils.randomAlphanumeric(8);
 
-        req.put("email", /*RandomStringUtils.randomAlphanumeric(10) +*/ "ntv@gmail.com");
+        req.put("email", /*RandomStringUtils.randomAlphanumeric(10) +*/ "nvh@gmail.com");
         req.put("password", /*pass*/ "123456");
         req.put("re_pass", /*pass*/ "123456");
         req.put("address", RandomStringUtils.randomAlphanumeric(30));

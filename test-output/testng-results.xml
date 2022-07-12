@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-06T21:21:20 ICT" name="Command line suite" finished-at="2022-07-06T21:21:28 ICT" duration-ms="8581">
+  <suite started-at="2022-07-12T15:42:28 ICT" name="Command line suite" finished-at="2022-07-12T15:42:33 ICT" duration-ms="4364">
     <groups>
     </groups>
-    <test started-at="2022-07-06T21:21:20 ICT" name="Command line test" finished-at="2022-07-06T21:21:28 ICT" duration-ms="8581">
-      <class name="com.tvinh.test1.Get_news">
-        <test-method signature="Test01()[pri:0, instance:com.tvinh.test1.Get_news@30adceeb]" started-at="2022-07-06T21:21:20 ICT" name="Test01" finished-at="2022-07-06T21:21:28 ICT" duration-ms="8556" status="PASS">
+    <test started-at="2022-07-12T15:42:28 ICT" name="Command line test" finished-at="2022-07-12T15:42:33 ICT" duration-ms="4364">
+      <class name="com.tvinh.test1.UploadStatusTest">
+        <test-method signature="Test01()[pri:0, instance:com.tvinh.test1.UploadStatusTest@537c58d0]" started-at="2022-07-12T15:42:28 ICT" name="Test01" finished-at="2022-07-12T15:42:33 ICT" duration-ms="4363" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test01 -->
-      </class> <!-- com.tvinh.test1.Get_news -->
+      </class> <!-- com.tvinh.test1.UploadStatusTest -->
     </test> <!-- Command line test -->
   </suite> <!-- Command line suite -->
 </testng-results>

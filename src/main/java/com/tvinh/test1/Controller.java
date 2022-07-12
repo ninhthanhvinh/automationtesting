@@ -38,14 +38,14 @@ public class Controller implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         uriChoice.getItems().addAll("heroku2", "heroku3");
         uriChoice.setOnAction(this::setUriChoice);
-        apiChoice.getItems().addAll("Login", "Edit", "Sign Up", "Log Out",
-                "get_list_auctions", "get_list_auctions_by_status", "get_list_auctions_by_Type",
+        apiChoice.getItems().addAll("Login", "Edit", "Sign Up", "Log Out", "Change_PassWord",
+                "Info", "get_list_auctions", "get_list_auctions_by_status", "get_list_auctions_by_Type",
                 "get_list_auctions_by_User", "get_detail_auction", "create_auction", "edit_auction",
                 "create_item", "create_comment", "get_list_comment", "create_bid",
                 "Get_list_bids", "Get_list_categories", "Get_list_brands", "Accept_max_bid",
                 "Contact_us", "Like_auction", "Get_list_like", "Total_likes_of_auction",
                 "Get_news", "Read_new", "Get_notifications", "Read_notifications",
-                "Get_slider", "search", "delete_comment");
+                "Get_slider", "search", "delete_comment", "UploadStatus");
         apiChoice.setOnAction(this::setApiChoice);
         staticTxtArea = textAreaGUI;
     }
@@ -66,6 +66,14 @@ public class Controller implements Initializable {
         else if (Objects.equals(api, "logout")){
             LogOutTest lot = new LogOutTest();
             lot.call();
+        }
+        else if (Objects.equals(api, "ChangePass")){
+            ChangePassTest hien = new ChangePassTest();
+            hien.call();
+        }
+        else if (Objects.equals(api, "info")){
+            InfoTest hien = new InfoTest();
+            hien.call();
         }
         else if (Objects.equals(api, "get_list_auctions")){
             GetListAuctionTest getAuction = new GetListAuctionTest();
@@ -171,6 +179,10 @@ public class Controller implements Initializable {
             Delete_comment hien = new Delete_comment();
             hien.call();
         }
+        else if (Objects.equals(api, "UploadStatus")){
+            UploadStatusTest hien = new UploadStatusTest();
+            hien.call();
+        }
     }
 
     public void setUriChoice(ActionEvent event){
@@ -184,6 +196,8 @@ public class Controller implements Initializable {
         else if (choice == "Sign Up") api = "signup";
         else if (choice == "Edit") api = "edit";
         else if (choice == "Log Out") api = "logout";
+        else if (choice == "Change_PassWord") api = "ChangePass";
+        else if (choice == "Info") api = "info";
         else if (choice == "get_list_auctions") api = "get_list_auctions";
         else if (choice == "get_list_auctions_by_status") api = "get_list_auctions_by_status";
         else if (choice == "get_list_auctions_by_Type") api = "get_list_auctions_by_Type";
@@ -210,5 +224,6 @@ public class Controller implements Initializable {
         else if (choice == "Get_slider") api = "Get_slider";
         else if (choice == "search") api = "search";
         else if (choice == "delete_comment") api = "delete_comment";
+        else if (choice == "UploadStatus") api = "UploadStatus";
     }
 }
