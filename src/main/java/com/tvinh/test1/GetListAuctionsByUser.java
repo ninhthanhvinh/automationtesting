@@ -27,7 +27,7 @@ public class GetListAuctionsByUser {
                 queryParam("index", "1").
                 queryParam("count", "2").
                 when().
-                get("/auctions/listAuctionsByStatus/{statusId}");
+                get("/auctions/listAuctionsByUser/{statusId}");
         System.out.println(response.getBody().asString());
         JsonPath jsonPath = response.jsonPath();
         assertEquals(jsonPath.getInt("code"), 1000);
@@ -48,7 +48,7 @@ public class GetListAuctionsByUser {
                 queryParam("index", "1").
                 queryParam("count", "2").
                 when().
-                get("/auctions/listAuctionsByStatus/{statusId}");
+                get("/auctions/listAuctionsByUser/{statusId}");
         System.out.println(response.getBody().asString());
         JsonPath jsonPath = response.jsonPath();
         assertEquals(jsonPath.getInt("code"), 1000);
@@ -69,7 +69,7 @@ public class GetListAuctionsByUser {
                 queryParam("index", "1").
                 queryParam("count", "2").
                 when().
-                get("/auctions/listAuctionsByStatus/{statusId}");
+                get("/auctions/listAuctionsByUser/{statusId}");
         System.out.println(response.getBody().asString());
         JsonPath jsonPath = response.jsonPath();
         assertEquals(jsonPath.getInt("code"), 1000);
@@ -90,7 +90,7 @@ public class GetListAuctionsByUser {
                 queryParam("index", "1").
                 queryParam("count", "2").
                 when().
-                get("/auctions/listAuctionsByStatus/{statusId}");
+                get("/auctions/listAuctionsByUser/{statusId}");
         System.out.println(response.getBody().asString());
         JsonPath jsonPath = response.jsonPath();
         assertEquals(jsonPath.getInt("code"), 1000);
@@ -111,7 +111,7 @@ public class GetListAuctionsByUser {
                 queryParam("index", "1").
                 queryParam("count", "2").
                 when().
-                get("/auctions/listAuctionsByStatus/{statusId}");
+                get("/auctions/listAuctionsByUser/{statusId}");
         System.out.println(response.getBody().asString());
         JsonPath jsonPath = response.jsonPath();
         assertEquals(jsonPath.getInt("code"), 1000);
@@ -122,20 +122,17 @@ public class GetListAuctionsByUser {
         //baseURI = AutomationTesting.baseuri;
         baseURI = "https://auctions-app-2.herokuapp.com/api";
 
-        LoginTest loginTest = new LoginTest();
-        String accessToken = "bearer" + loginTest.getAccessToken();
 
         Response response = given().
                 contentType(ContentType.JSON).with().
-                header("Authorization", accessToken).
                 pathParam("statusId", "6").
                 queryParam("index", "1").
                 queryParam("count", "2").
                 when().
-                get("/auctions/listAuctionsByStatus/{statusId}");
+                get("/auctions/listAuctionsByUser/{statusId}");
         System.out.println(response.getBody().asString());
         JsonPath jsonPath = response.jsonPath();
-        assertEquals(jsonPath.getInt("code"), 1000);
+        assertEquals(jsonPath.getInt("code"), 1004);
 
     }
 
