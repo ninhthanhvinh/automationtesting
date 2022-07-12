@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e4d0a700-e8f3-43e9-a7b6-ed0dae3ce70d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListAuctionsByUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListAuctionsByUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListLikesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tvinh/test1/GetListLikesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +54,7 @@
       <recent name="com.tvinh.test1" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.GetListAuctionsByUser.TestCase06">
+  <component name="RunManager" selected="TestNG.Search.Test05">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-18 (2)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -72,7 +72,7 @@
       <option name="AUTO_RESTART" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Accept_max_bid" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AuctionCreateTest.TestCase02" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Test1" />
       <shortenClasspath name="NONE" />
       <extension name="coverage">
@@ -83,60 +83,7 @@
       </extension>
       <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="com.tvinh.test1" />
-      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.Accept_max_bid" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GetListAuctionByTypeTest.TestCase01" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Test1" />
-      <shortenClasspath name="NONE" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tvinh.test1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="com.tvinh.test1" />
-      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.GetListAuctionByTypeTest" />
-      <option name="METHOD_NAME" value="TestCase01" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GetListAuctionByTypeTest.TestCase02" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Test1" />
-      <shortenClasspath name="NONE" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.tvinh.test1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="com.tvinh.test1" />
-      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.GetListAuctionByTypeTest" />
+      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.AuctionCreateTest" />
       <option name="METHOD_NAME" value="TestCase02" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
@@ -152,7 +99,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetListAuctionsByUser" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GetListLikesTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Test1" />
       <shortenClasspath name="NONE" />
       <extension name="coverage">
@@ -163,7 +110,7 @@
       </extension>
       <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="com.tvinh.test1" />
-      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.GetListAuctionsByUser" />
+      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.GetListLikesTest" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="PARAMETERS" value="" />
@@ -178,7 +125,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetListAuctionsByUser.TestCase06" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GetListLikesTest.TestCase03" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Test1" />
       <shortenClasspath name="NONE" />
       <extension name="coverage">
@@ -189,8 +136,61 @@
       </extension>
       <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="com.tvinh.test1" />
-      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.GetListAuctionsByUser" />
-      <option name="METHOD_NAME" value="TestCase06" />
+      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.GetListLikesTest" />
+      <option name="METHOD_NAME" value="TestCase03" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Search" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Test1" />
+      <shortenClasspath name="NONE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tvinh.test1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.tvinh.test1" />
+      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.Search" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Search.Test05" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Test1" />
+      <shortenClasspath name="NONE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tvinh.test1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.tvinh.test1" />
+      <option name="MAIN_CLASS_NAME" value="com.tvinh.test1.Search" />
+      <option name="METHOD_NAME" value="Test05" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="PARAMETERS" value="" />
@@ -235,11 +235,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.GetListAuctionsByUser.TestCase06" />
-        <item itemvalue="TestNG.GetListAuctionsByUser" />
-        <item itemvalue="TestNG.GetListAuctionByTypeTest.TestCase02" />
-        <item itemvalue="TestNG.GetListAuctionByTypeTest.TestCase01" />
-        <item itemvalue="TestNG.Accept_max_bid" />
+        <item itemvalue="TestNG.Search.Test05" />
+        <item itemvalue="TestNG.Search" />
+        <item itemvalue="TestNG.GetListLikesTest" />
+        <item itemvalue="TestNG.GetListLikesTest.TestCase03" />
+        <item itemvalue="TestNG.AuctionCreateTest.TestCase02" />
       </list>
     </recent_temporary>
   </component>

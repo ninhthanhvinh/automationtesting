@@ -56,6 +56,26 @@ public class GetListLikesTest {
         JsonPath jsonPath = response.jsonPath();
         assertEquals(jsonPath.getInt("code"), 1000);
     }
+
+    @Test
+    public void TestCase03() {
+        //baseURI = AutomationTesting.baseuri;
+        baseURI = "https://auctions-app-2.herokuapp.com/api";
+
+
+        Response response = given().
+                contentType(ContentType.JSON).
+                with().
+                pathParam("statusID", 1011).
+                //header("Authorization", accessToken).
+                        queryParam("index", "11").
+                queryParam("count", "1112").
+                when().
+                get("/likes/{statusID}");
+        System.out.println(response.getBody().asString());
+        JsonPath jsonPath = response.jsonPath();
+        assertEquals(jsonPath.getInt("code"), 1004);
+    }
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();
