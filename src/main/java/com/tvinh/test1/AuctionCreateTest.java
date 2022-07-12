@@ -90,7 +90,6 @@ public class AuctionCreateTest {
                 body(request.toJSONString()).
                 when().
                 post("/auctions/create");
-        System.out.println(response.getBody().asString());
         JsonPath jsonPath = response.jsonPath();
         LinkedHashMap<String, Object> data = jsonPath.get("data");
         return (int) data.get("auction_id");
