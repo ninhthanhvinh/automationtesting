@@ -27,15 +27,15 @@ public class Create_bid {
         LoginTest loginTest = new LoginTest();
         String ACCESS_TOKEN = loginTest.getAccessToken();
 
-        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
-        int id = auctionCreateTest.getID();
+        GetListAuctionsByStatusTest gl = new GetListAuctionsByStatusTest();
+        int id = gl.getActiveAuctionID();
 
         Response res = given().
                             header("Authorization", "bearer" + ACCESS_TOKEN).
                             contentType(JSON).
                         with().
                             pathParam("auctionId", id).
-                            queryParam("price", 111000000).
+                            queryParam("price", 999999999).
                             queryParam("bid_last_id", "1234").
                         when().
                             post("/bids/create/{auctionId}");

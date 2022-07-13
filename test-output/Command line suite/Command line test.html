@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jul 13 20:49:32 ICT 2022</td>
+<td>Started on:</td><td>Thu Jul 14 00:08:40 ICT 2022</td>
 </tr>
-<tr><td>Total time:</td><td>5 seconds (5321 ms)</td>
+<tr><td>Total time:</td><td>5 seconds (5440 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,30 +76,12 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.tvinh.test1.Create_chat.Test01()'><b>Test01</b><br>Test class: com.tvinh.test1.Create_chat</td>
-<td><div><pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;200&gt; but was &lt;404&gt;.
-
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:58)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at rest.assured@5.1.1/io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at rest.assured@5.1.1/io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at rest.assured@5.1.1/io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at rest.assured@5.1.1/io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at rest.assured@5.1.1/io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at rest.assured@5.1.1/io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at com.tvinh.test1/com.tvinh.test1.Create_chat.Test01(Create_chat.java:34)
+<td title='com.tvinh.test1.Create_bid.Test01()'><b>Test01</b><br>Test class: com.tvinh.test1.Create_bid</td>
+<td><div><pre>java.lang.AssertionError: expected [1000] but found [1001]
+	at com.tvinh.test1/com.tvinh.test1.Create_bid.Test01(Create_bid.java:47)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at com.tvinh.test1/com.tvinh.test1.Create_chat.call(Create_chat.java:46)
-	at com.tvinh.test1/com.tvinh.test1.Controller.Test(Controller.java:196)
+	at com.tvinh.test1/com.tvinh.test1.Create_bid.call(Create_bid.java:56)
+	at com.tvinh.test1/com.tvinh.test1.Controller.Test(Controller.java:120)
 	at javafx.fxml@18/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
 	at javafx.fxml@18/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1854)
 	at javafx.fxml@18/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1724)
@@ -148,33 +130,15 @@ Expected status code &lt;200&gt; but was &lt;404&gt;.
 	at javafx.graphics@18/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
 	at javafx.graphics@18/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:184)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1451229241", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1451229241'><pre>java.lang.AssertionError: 1 expectation failed.
-Expected status code &lt;200&gt; but was &lt;404&gt;.
-
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:58)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at rest.assured@5.1.1/io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at rest.assured@5.1.1/io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-	at rest.assured@5.1.1/io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at rest.assured@5.1.1/io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at rest.assured@5.1.1/io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
-	at rest.assured@5.1.1/io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
-	at com.tvinh.test1/com.tvinh.test1.Create_chat.Test01(Create_chat.java:34)
+... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1746184162", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1746184162'><pre>java.lang.AssertionError: expected [1000] but found [1001]
+	at org.testng@7.6.0/org.testng.Assert.fail(Assert.java:110)
+	at org.testng@7.6.0/org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng@7.6.0/org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng@7.6.0/org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng@7.6.0/org.testng.Assert.assertEquals(Assert.java:1240)
+	at org.testng@7.6.0/org.testng.Assert.assertEquals(Assert.java:1274)
+	at com.tvinh.test1/com.tvinh.test1.Create_bid.Test01(Create_bid.java:47)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng@7.6.0/org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -198,8 +162,8 @@ Expected status code &lt;200&gt; but was &lt;404&gt;.
 	at org.testng@7.6.0/org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
 	at org.testng@7.6.0/org.testng.TestNG.runSuites(TestNG.java:1099)
 	at org.testng@7.6.0/org.testng.TestNG.run(TestNG.java:1067)
-	at com.tvinh.test1/com.tvinh.test1.Create_chat.call(Create_chat.java:46)
-	at com.tvinh.test1/com.tvinh.test1.Controller.Test(Controller.java:196)
+	at com.tvinh.test1/com.tvinh.test1.Create_bid.call(Create_bid.java:56)
+	at com.tvinh.test1/com.tvinh.test1.Controller.Test(Controller.java:120)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:77)
@@ -256,7 +220,7 @@ Expected status code &lt;200&gt; but was &lt;404&gt;.
 	at java.base/java.lang.Thread.run(Thread.java:833)
 </pre></div></td>
 <td>5</td>
-<td>com.tvinh.test1.Create_chat@43e66a57</td></tr>
+<td>com.tvinh.test1.Create_bid@3a35a7e9</td></tr>
 </table><p>
 </body>
 </html>

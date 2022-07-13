@@ -15,8 +15,8 @@ public class Info_auction {
 
     @Test
     public void Test01(){
-        baseURI = AutomationTesting.baseuri;
-        //baseURI = "https://auctions-app-2.herokuapp.com/api";
+        //baseURI = AutomationTesting.baseuri;
+        baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         LoginTest loginTest = new LoginTest();
         String access_token = loginTest.getAccessToken();
@@ -28,7 +28,7 @@ public class Info_auction {
                             header("Authorization", "bearer" + access_token).
                             contentType(ContentType.JSON).
                         with().
-                            pathParam("auctionId", id).
+                            pathParam("auctionId", "1622").
                         when().
                             get("/auctions/info/{auctionId}");
         res.then().statusCode(200);
