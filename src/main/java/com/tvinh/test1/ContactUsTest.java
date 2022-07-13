@@ -95,6 +95,59 @@ public class ContactUsTest {
         JsonPath jpath = res.jsonPath();
         assertEquals(jpath.getInt("code"), 1001);
     }
+
+    @Test
+    public void Test04(){
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
+        JSONObject req = new JSONObject();
+
+        req.put("name", "vinh");
+        req.put("phone", "090");
+        req.put("email", "ninhthanhvinh@gmail.com");
+        req.put("content", "Test thôi");
+        req.put("file", null);
+        req.put("report_type", "4");
+
+
+        Response res = given().
+                contentType(ContentType.JSON).
+                body(req.toJSONString()).
+                when().
+                post("/contactUs");
+
+        System.out.println(res.getBody().asString());
+
+        JsonPath jpath = res.jsonPath();
+        assertEquals(jpath.getInt("code"), 1000);
+    }
+
+    @Test
+    public void Test05(){
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
+        JSONObject req = new JSONObject();
+
+        req.put("name", "vinh");
+        req.put("phone", "090");
+        req.put("email", "ninhthanhvinh@gmail.com");
+        req.put("content", "");
+        req.put("file", null);
+        req.put("report_type", "2");
+
+
+        Response res = given().
+                contentType(ContentType.JSON).
+                body(req.toJSONString()).
+                when().
+                post("/contactUs");
+
+        System.out.println(res.getBody().asString());
+
+        JsonPath jpath = res.jsonPath();
+        assertEquals(jpath.getInt("code"), 1000);
+    }
+
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();

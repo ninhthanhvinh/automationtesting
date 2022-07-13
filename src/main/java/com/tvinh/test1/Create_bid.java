@@ -48,6 +48,33 @@ public class Create_bid {
 
     }
 
+    @Test
+    public void Test02() {
+        baseURI = AutomationTesting.baseuri;
+//        baseURI = "https://auction-app-2.herokuapp.com/api";
+
+        LoginTest loginTest = new LoginTest();
+        String ACCESS_TOKEN = loginTest.getAccessToken();
+
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
+
+        Response res = given().
+                header("Authorization", "bearer" + ACCESS_TOKEN).
+                contentType(JSON).
+                with().
+                pathParam("auctionId", id).
+                queryParam("price", 1).
+                queryParam("bid_last_id", "1235").
+                when().
+                post("/bids/create/{auctionId}");
+
+        res.then().statusCode(200);
+        System.out.println(res.getBody().asString());
+
+        JsonPath jpath = res.jsonPath();
+        assertEquals(jpath.getInt("code"), 1001);
+    }
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();

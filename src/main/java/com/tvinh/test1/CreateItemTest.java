@@ -52,6 +52,169 @@ public class CreateItemTest {
         assertEquals(jsonPath.getInt("code"),1000);
     }
 
+    @Test
+    public void TestCase02(){
+        baseURI = AutomationTesting.baseuri;
+//        baseURI = "https://auctions-app-2.herokuapp.com/api";
+
+        JSONObject request = new JSONObject();
+        request.put("name", RandomStringUtils.randomAlphanumeric(10));
+        request.put("starting_price", 1);
+        request.put("brand_id", 11);
+        request.put("description", RandomStringUtils.randomAlphanumeric(10));
+        request.put("series", RandomStringUtils.randomAlphanumeric(10));
+        request.put("images", null);
+
+        LoginTest loginTest = new LoginTest();
+        String accessToken = "bearer" + loginTest.getAccessToken();
+
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
+
+        Response response = given().
+                header("Authorization", accessToken).
+                contentType(ContentType.JSON).
+                with().
+                pathParam("auctionId", id).
+                with().
+                body(request.toJSONString()).
+                when().
+                post("/items/create/{auctionId}");
+        System.out.println(response.getBody().asString());
+        JsonPath jsonPath = response.jsonPath();
+        assertEquals(jsonPath.getInt("code"),1001);
+    }
+
+    @Test
+    public void TestCase03(){
+        baseURI = AutomationTesting.baseuri;
+//        baseURI = "https://auctions-app-2.herokuapp.com/api";
+
+        JSONObject request = new JSONObject();
+        request.put("name", RandomStringUtils.randomAlphanumeric(256));
+        request.put("starting_price", 1);
+        request.put("brand_id", 5);
+        request.put("description", RandomStringUtils.randomAlphanumeric(10));
+        request.put("series", RandomStringUtils.randomAlphanumeric(10));
+        request.put("images", null);
+
+        LoginTest loginTest = new LoginTest();
+        String accessToken = "bearer" + loginTest.getAccessToken();
+
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
+
+        Response response = given().
+                header("Authorization", accessToken).
+                contentType(ContentType.JSON).
+                with().
+                pathParam("auctionId", id).
+                with().
+                body(request.toJSONString()).
+                when().
+                post("/items/create/{auctionId}");
+        System.out.println(response.getBody().asString());
+        JsonPath jsonPath = response.jsonPath();
+        assertEquals(jsonPath.getInt("code"),1001);
+    }
+
+    @Test
+    public void TestCase04(){
+        baseURI = AutomationTesting.baseuri;
+//        baseURI = "https://auctions-app-2.herokuapp.com/api";
+
+        JSONObject request = new JSONObject();
+        request.put("name", RandomStringUtils.randomAlphanumeric(10));
+        request.put("starting_price", "a");
+        request.put("brand_id", 5);
+        request.put("description", RandomStringUtils.randomAlphanumeric(10));
+        request.put("series", RandomStringUtils.randomAlphanumeric(10));
+        request.put("images", null);
+
+        LoginTest loginTest = new LoginTest();
+        String accessToken = "bearer" + loginTest.getAccessToken();
+
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
+
+        Response response = given().
+                header("Authorization", accessToken).
+                contentType(ContentType.JSON).
+                with().
+                pathParam("auctionId", id).
+                with().
+                body(request.toJSONString()).
+                when().
+                post("/items/create/{auctionId}");
+        System.out.println(response.getBody().asString());
+        JsonPath jsonPath = response.jsonPath();
+        assertEquals(jsonPath.getInt("code"),1001);
+    }
+    @Test
+    public void TestCase05(){
+        baseURI = AutomationTesting.baseuri;
+//        baseURI = "https://auctions-app-2.herokuapp.com/api";
+
+        JSONObject request = new JSONObject();
+        request.put("name", RandomStringUtils.randomAlphanumeric(10));
+        request.put("starting_price", 1);
+        request.put("brand_id", 5);
+        request.put("description", "");
+        request.put("series", RandomStringUtils.randomAlphanumeric(10));
+        request.put("images", null);
+
+        LoginTest loginTest = new LoginTest();
+        String accessToken = "bearer" + loginTest.getAccessToken();
+
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
+
+        Response response = given().
+                header("Authorization", accessToken).
+                contentType(ContentType.JSON).
+                with().
+                pathParam("auctionId", id).
+                with().
+                body(request.toJSONString()).
+                when().
+                post("/items/create/{auctionId}");
+        System.out.println(response.getBody().asString());
+        JsonPath jsonPath = response.jsonPath();
+        assertEquals(jsonPath.getInt("code"),1001);
+    }
+
+    @Test
+    public void TestCase06(){
+        baseURI = AutomationTesting.baseuri;
+//        baseURI = "https://auctions-app-2.herokuapp.com/api";
+
+        JSONObject request = new JSONObject();
+        request.put("name", RandomStringUtils.randomAlphanumeric(10));
+        request.put("starting_price", 1);
+        request.put("brand_id", 5);
+        request.put("description", RandomStringUtils.randomAlphanumeric(10));
+        request.put("series", RandomStringUtils.randomAlphanumeric(11));
+        request.put("images", null);
+
+        LoginTest loginTest = new LoginTest();
+        String accessToken = "bearer" + loginTest.getAccessToken();
+
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
+
+        Response response = given().
+                header("Authorization", accessToken).
+                contentType(ContentType.JSON).
+                with().
+                pathParam("auctionId", id).
+                with().
+                body(request.toJSONString()).
+                when().
+                post("/items/create/{auctionId}");
+        System.out.println(response.getBody().asString());
+        JsonPath jsonPath = response.jsonPath();
+        assertEquals(jsonPath.getInt("code"),1001);
+    }
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();

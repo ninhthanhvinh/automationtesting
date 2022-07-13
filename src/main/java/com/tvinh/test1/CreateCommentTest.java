@@ -21,8 +21,8 @@ public class CreateCommentTest {
 
     @Test
     public void TestCase01() {
-        //baseURI = AutomationTesting.baseuri;
-        baseURI = "https://auctions-app-2.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+//        baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         JSONObject request = new JSONObject();
         /*
@@ -41,12 +41,12 @@ public class CreateCommentTest {
                 with().
                 pathParam("auctionId", id).
                 queryParam("content", "Vinh dep trai").
-                queryParam("comment_last_id", 2).
+                queryParam("comment_last_id", id).
                 when().
                 post("/comments/create/{auctionId}");
         System.out.println(response.getBody().asString());
         JsonPath jsonPath = response.jsonPath();
-        assertEquals(jsonPath.getInt("code"), 1000);
+        assertEquals(jsonPath.getInt("code"), 1008);
 
     }
     public void call(){

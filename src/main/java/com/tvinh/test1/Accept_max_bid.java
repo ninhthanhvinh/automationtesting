@@ -46,6 +46,32 @@ public class Accept_max_bid {
         assertEquals(jpath.getInt("code"), 1009);
     }
 
+
+    @Test
+    public void Test02 (){
+
+         baseURI = AutomationTesting.baseuri;
+//        baseURI = "https://auctions-app-2.herokuapp.com/api";
+
+        LoginTest loginTest = new LoginTest();
+        String ACCESS_TOKEN = loginTest.getAccessToken();
+
+
+        Response res = given().
+                header("Authorization", "bearer" + ACCESS_TOKEN).
+                contentType(ContentType.JSON).
+                with().
+                pathParam("auctionId", 123).
+                queryParam("selling_info", "sell baby Vinh").
+                when().
+                post("/accept/{auctionId}");
+        res.then().statusCode(200);
+        System.out.println(res.getBody().asString());
+
+        JsonPath jpath = res.jsonPath();
+        assertEquals(jpath.getInt("code"), 1006);
+    }
+
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();
