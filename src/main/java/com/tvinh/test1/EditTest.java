@@ -26,6 +26,7 @@ public class EditTest {
         JSONObject request = new JSONObject();
 
         baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         LoginTest loginTest = new LoginTest();
 

@@ -22,7 +22,8 @@ public class Get_notifications {
     public void Test01() {
         JSONObject request = new JSONObject();
 
-        baseURI = "https://auction-app3.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         LoginTest loginTest = new LoginTest();
         String ACCESS_TOKEN = loginTest.getAccessToken();
@@ -44,7 +45,8 @@ public class Get_notifications {
     public void Test02() {
         JSONObject request = new JSONObject();
 
-        baseURI = "https://auction-app3.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         LoginTest loginTest = new LoginTest();
         String ACCESS_TOKEN = loginTest.getAccessToken();
@@ -66,7 +68,8 @@ public class Get_notifications {
     public void Test03() {
         JSONObject request = new JSONObject();
 
-        baseURI = "https://auction-app3.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         LoginTest loginTest = new LoginTest();
         String ACCESS_TOKEN = loginTest.getAccessToken();

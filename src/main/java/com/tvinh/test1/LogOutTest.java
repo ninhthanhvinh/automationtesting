@@ -15,8 +15,8 @@ public class LogOutTest {
     @Test
     public void Test01() {
 
-        //baseURI = AutomationTesting.baseuri;
-        baseURI = "https://auctions-app-2.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         LoginTest loginTest = new LoginTest();
         String ACCESS_TOKEN = loginTest.getAccessToken();

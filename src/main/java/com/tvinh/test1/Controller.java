@@ -44,8 +44,8 @@ public class Controller implements Initializable {
                 "create_item", "create_comment", "get_list_comment", "create_bid",
                 "Get_list_bids", "Get_list_categories", "Get_list_brands", "Accept_max_bid",
                 "Contact_us", "Like_auction", "Get_list_like", "Total_likes_of_auction",
-                "Get_news", "Read_new", "Get_notifications", "Read_notifications",
-                "Get_slider", "search", "delete_comment", "UploadStatus");
+                "Get_news", "Read_new", "Get_notifications", "Read_notifications", "Get_slider",
+                "search", "delete_comment", "UploadStatus", "Info_auction", "Info_Item", "Create_chat");
         apiChoice.setOnAction(this::setApiChoice);
         staticTxtArea = textAreaGUI;
     }
@@ -183,11 +183,23 @@ public class Controller implements Initializable {
             UploadStatusTest hien = new UploadStatusTest();
             hien.call();
         }
+        else if (Objects.equals(api, "Info_auction")){
+            Info_auction hien = new Info_auction();
+            hien.call();
+        }
+        else if (Objects.equals(api, "Info_Item")){
+            Info_Item hien = new Info_Item();
+            hien.call();
+        }
+        else if (Objects.equals(api, "Create_chat")){
+            Create_chat hien = new Create_chat();
+            hien.call();
+        }
     }
 
     public void setUriChoice(ActionEvent event){
         String choice = uriChoice.getValue();
-        if (choice == "heroku2") baseuri = "https://auction-app-2.herokuapp.com/api";
+        if (choice == "heroku2") baseuri = "https://auctions-app-2.herokuapp.com/api";
         else baseuri = "https://auction-app3.herokuapp.com/api";
     }
     public void setApiChoice(ActionEvent event){
@@ -225,5 +237,8 @@ public class Controller implements Initializable {
         else if (choice == "search") api = "search";
         else if (choice == "delete_comment") api = "delete_comment";
         else if (choice == "UploadStatus") api = "UploadStatus";
+        else if (choice == "Info_auction") api = "Info_auction";
+        else if (choice == "Info_Item") api = "Info_Item";
+        else if (choice == "Create_chat") api = "Create_chat";
     }
 }

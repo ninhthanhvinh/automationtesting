@@ -20,8 +20,8 @@ public class ContactUsTest {
     Map<String, Object> map = new HashMap<String, Object>();
     @Test
     public void Test01(){
-        //baseURI = AutomationTesting.baseuri;
-        baseURI = "https://auctions-app-2.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
         JSONObject req = new JSONObject();
 
         req.put("name", "vinh");
@@ -46,8 +46,8 @@ public class ContactUsTest {
 
     @Test
     public void Test02(){
-        //baseURI = AutomationTesting.baseuri;
-        baseURI = "https://auctions-app-2.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
         JSONObject req = new JSONObject();
 
         req.put("name", "hien");
@@ -72,8 +72,8 @@ public class ContactUsTest {
 
     @Test
     public void Test03(){
-        //baseURI = AutomationTesting.baseuri;
-        baseURI = "https://auctions-app-2.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
         JSONObject req = new JSONObject();
 
         req.put("name", "hien");

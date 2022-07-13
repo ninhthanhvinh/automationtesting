@@ -13,7 +13,8 @@ public class GetListAuctionTest {
     @Test
     public void Test01(){
 
-        baseURI = "https://auctions-app-2.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         Response res = given().
                             contentType(ContentType.JSON).
@@ -30,7 +31,8 @@ public class GetListAuctionTest {
     @Test
     public void Test02(){
 
-        baseURI = "https://auctions-app-2.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         Response res = given().
                 contentType(ContentType.JSON).
@@ -47,7 +49,8 @@ public class GetListAuctionTest {
     @Test
     public void Test03(){
 
-        baseURI = "https://auctions-app-2.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         Response res = given().
                 contentType(ContentType.JSON).
@@ -63,7 +66,8 @@ public class GetListAuctionTest {
     @Test
     public void Test04(){
 
-        baseURI = "https://auctions-app-2.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         Response res = given().
                 contentType(ContentType.JSON).
@@ -79,7 +83,8 @@ public class GetListAuctionTest {
     @Test
     public void Test05(){
 
-        baseURI = "https://auctions-app-2.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         Response res = given().
                 contentType(ContentType.JSON).
@@ -95,7 +100,8 @@ public class GetListAuctionTest {
     @Test
     public void Test06(){
 
-        baseURI = "https://auctions-app-2.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         Response res = given().
                 contentType(ContentType.JSON).

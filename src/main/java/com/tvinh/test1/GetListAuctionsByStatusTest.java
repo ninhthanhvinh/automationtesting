@@ -12,8 +12,8 @@ import static org.testng.AssertJUnit.assertEquals;
 public class GetListAuctionsByStatusTest {
     @Test
     public void TestCase01(){
-        //baseURI = AutomationTesting.baseuri;
-        baseURI = "https://auctions-app-2.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         Response response = given().
                 contentType(ContentType.JSON).
@@ -29,8 +29,8 @@ public class GetListAuctionsByStatusTest {
     }
     @Test
     public void TestCase02(){
-        //baseURI = AutomationTesting.baseuri;
-        baseURI = "https://auctions-app-2.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         Response response = given().
                 contentType(ContentType.JSON).
@@ -46,8 +46,8 @@ public class GetListAuctionsByStatusTest {
     }
     @Test
     public void TestCase03(){
-        //baseURI = AutomationTesting.baseuri;
-        baseURI = "https://auctions-app-2.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         Response response = given().
                 contentType(ContentType.JSON).
@@ -63,8 +63,8 @@ public class GetListAuctionsByStatusTest {
     }
     @Test
     public void TestCase04(){
-        //baseURI = AutomationTesting.baseuri;
-        baseURI = "https://auctions-app-2.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         Response response = given().
                 contentType(ContentType.JSON).
@@ -80,8 +80,8 @@ public class GetListAuctionsByStatusTest {
     }
     @Test
     public void TestCase05(){
-        //baseURI = AutomationTesting.baseuri;
-        baseURI = "https://auctions-app-2.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         Response response = given().
                 contentType(ContentType.JSON).
@@ -97,8 +97,8 @@ public class GetListAuctionsByStatusTest {
     }
     @Test
     public void TestCase06(){
-        //baseURI = AutomationTesting.baseuri;
-        baseURI = "https://auctions-app-2.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         Response response = given().
                 contentType(ContentType.JSON).

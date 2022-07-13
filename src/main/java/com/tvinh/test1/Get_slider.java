@@ -18,7 +18,8 @@ public class Get_slider {
     @Test
     public void Test01() {
 
-        baseURI = "https://auction-app3.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         Response res = given().contentType(ContentType.JSON).
                         when().get("/slider");

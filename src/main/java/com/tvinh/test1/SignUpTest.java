@@ -27,7 +27,8 @@ public class SignUpTest {
 
         JSONObject req = new JSONObject();
 
-        baseURI = "https://auction-app3.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         req.put("email", "ninhvinhdeptrai@gmail.com");
         req.put("password", "vinhdeptrai");
@@ -50,7 +51,8 @@ public class SignUpTest {
 
         JSONObject req = new JSONObject();
 
-        baseURI = "https://auction-app3.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         req.put("email", "");
         req.put("password", "123456");
@@ -73,7 +75,8 @@ public class SignUpTest {
 
         JSONObject req = new JSONObject();
 
-        baseURI = "https://auction-app3.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         req.put("email", "ninhthanhvinh@gmail.com");
         req.put("password", "123456");
@@ -96,7 +99,8 @@ public class SignUpTest {
 
         JSONObject req = new JSONObject();
 
-        baseURI = "https://auction-app3.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         req.put("email", "ninhthanhvinh@gmail.com");
         req.put("password", "");
@@ -119,7 +123,8 @@ public class SignUpTest {
 
         JSONObject req = new JSONObject();
 
-        baseURI = "https://auction-app3.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         req.put("email", "ninhvinh1@gmail.com");
         req.put("password", "123456");
@@ -142,7 +147,8 @@ public class SignUpTest {
 
         JSONObject req = new JSONObject();
 
-        baseURI = "https://auction-app3.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         req.put("email", "ninhthanhvinh@gmail.com");
         req.put("password", "123456");
@@ -165,7 +171,8 @@ public class SignUpTest {
 
         JSONObject req = new JSONObject();
 
-        baseURI = "https://auction-app3.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         req.put("email", "ninhthanhvinh@gmail.com");
         req.put("password", "123456");
@@ -188,8 +195,8 @@ public class SignUpTest {
 
         JSONObject req = new JSONObject();
 
-        //baseURI = AutomationTesting.baseuri;
-        baseURI = "https://auctions-app-2.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         //String pass = RandomStringUtils.randomAlphanumeric(8);
 

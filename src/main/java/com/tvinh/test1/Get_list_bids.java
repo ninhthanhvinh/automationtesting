@@ -21,7 +21,8 @@ public class Get_list_bids {
     @Test
     public void Test01() {
 
-        baseURI = "https://auction-app3.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
         int id = auctionCreateTest.getID();
@@ -46,7 +47,8 @@ public class Get_list_bids {
     @Test
     public void Test02() {
 
-        baseURI = "https://auction-app3.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
         int id = auctionCreateTest.getID();

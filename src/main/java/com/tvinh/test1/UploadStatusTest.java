@@ -14,7 +14,8 @@ public class UploadStatusTest {
     @Test
     public void Test01(){
 
-        baseURI = "https://auctions-app-2.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         Response response = given().
                                 contentType(ContentType.JSON).

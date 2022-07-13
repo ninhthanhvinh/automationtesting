@@ -20,8 +20,8 @@ public class EditAuctionTest {
     @Test
     public void TestCase01(){
 
-        //baseURI = AutomationTesting.baseuri;
-        baseURI = "https://auctions-app-2.herokuapp.com/api";
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
 
         LocalDateTime today = LocalDateTime.now();
