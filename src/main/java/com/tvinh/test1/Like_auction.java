@@ -77,7 +77,6 @@ public class Like_auction {
         System.out.println(data);
 
         assertEquals(jpath.getInt("code"), 1000);
-
     }
 
     public void call(){

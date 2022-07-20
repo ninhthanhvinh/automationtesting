@@ -3,6 +3,7 @@ package com.tvinh.test1;
 import com.tvinh.test1.AutomationTesting;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.json.simple.JSONObject;
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
@@ -11,6 +12,7 @@ import org.testng.annotations.Test;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Random;
 
 import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
@@ -46,7 +48,8 @@ public class LoginTest {
         System.out.println(response.getBody().asString());
         JsonPath jpath = response.jsonPath();
         int code = jpath.getInt("code");
-        assertEquals(code, 1000);
+        assertEquals(code, 1002);
+        if(code != 1002) System.out.println("Test01 fail");
     }
     @Test
     public void Test02() {
@@ -68,7 +71,9 @@ public class LoginTest {
         JsonPath jpath = response.jsonPath();
         int code = jpath.getInt("code");
         assertEquals(code, 1001);
+        if(code != 1001) System.out.println("Test02 fail");
     }
+
     @Test
     public void Test03() {
 
@@ -90,6 +95,7 @@ public class LoginTest {
         JsonPath jpath = response.jsonPath();
         int code = jpath.getInt("code");
         assertEquals(code, 1002);
+        if(code != 1002) System.out.println("Test03 fail");
     }
 
     @Test
@@ -112,7 +118,8 @@ public class LoginTest {
         System.out.println(response.getBody().asString());
         JsonPath jpath = response.jsonPath();
         int code = jpath.getInt("code");
-        assertEquals(code, 1002);
+        assertEquals(code, 1001);
+        if(code != 1001) System.out.println("Test04 fail");
     }
 
     @Test
@@ -136,6 +143,7 @@ public class LoginTest {
         JsonPath jpath = response.jsonPath();
         int code = jpath.getInt("code");
         assertEquals(code, 1001);
+        if(code != 1001) System.out.println("Test05 fail");
     }
 
     @Test
@@ -159,6 +167,7 @@ public class LoginTest {
         JsonPath jpath = response.jsonPath();
         int code = jpath.getInt("code");
         assertEquals(code, 1001);
+        if(code != 1001) System.out.println("Test06 fail");
     }
 
     @Test
@@ -168,8 +177,8 @@ public class LoginTest {
 
         JSONObject request = new JSONObject();
 
-        baseURI = AutomationTesting.baseuri;
-        // baseURI = "https://auctions-app-2.herokuapp.com/api";
+        //baseURI = AutomationTesting.baseuri;
+         baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         request.put("email", "nvh@gmail.com");
         request.put("password", "123456");
@@ -182,6 +191,59 @@ public class LoginTest {
         JsonPath jpath = response.jsonPath();
         int code = jpath.getInt("code");
         assertEquals(code, 1000);
+        if(code != 1002) System.out.println("Test07 fail");
+    }
+
+    @Test
+    public void Test08() {
+
+        Map<String, Object> map = new HashMap<String, Object>();
+
+        JSONObject request = new JSONObject();
+
+        baseURI = AutomationTesting.baseuri;
+
+        Random random = new Random();
+        String over255 = RandomStringUtils.randomAlphabetic(255);
+
+        request.put("email", over255 + "@nvh.com");
+        request.put("password", "");
+
+        Response response = given().contentType(JSON).
+                body(request.toJSONString()).
+                when().
+                post("/login");
+        System.out.println(response.getBody().asString());
+        JsonPath jpath = response.jsonPath();
+        int code = jpath.getInt("code");
+        assertEquals(code, 1001);
+        if(code != 1001) System.out.println("Test08 fail");
+    }
+
+    @Test
+    public void Test09() {
+
+        Map<String, Object> map = new HashMap<String, Object>();
+
+        JSONObject request = new JSONObject();
+
+        baseURI = AutomationTesting.baseuri;
+
+        Random random = new Random();
+        String over255 = RandomStringUtils.randomAlphabetic(255);
+
+        request.put("email", over255 + "@nvh.com");
+        request.put("password", over255 +"132");
+
+        Response response = given().contentType(JSON).
+                body(request.toJSONString()).
+                when().
+                post("/login");
+        System.out.println(response.getBody().asString());
+        JsonPath jpath = response.jsonPath();
+        int code = jpath.getInt("code");
+        assertEquals(code, 1001);
+        if(code != 1001) System.out.println("Test09 fail");
     }
 
     public void call(){
@@ -200,8 +262,8 @@ public class LoginTest {
         baseURI = AutomationTesting.baseuri;
         //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
-        request.put("email", "nvh@gmail.com");
-        request.put("password", "123456");
+        request.put("email", "vinhnt67@gmail.com");
+        request.put("password", "12345678");
 
         Response response = given().contentType(JSON).
                 body(request.toJSONString()).
@@ -213,7 +275,6 @@ public class LoginTest {
 
         return data.get("access_token").toString();
     }
-
 }
 
 

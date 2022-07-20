@@ -22,9 +22,7 @@ public class GetBrandsTest {
                                 get("/brands");
         System.out.println(response.getBody().asString());
         assertNotNull(response);
-
     }
-
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();

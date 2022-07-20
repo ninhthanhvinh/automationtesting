@@ -30,6 +30,40 @@ public class GetTotalLikeOfAuctionTest {
         assertEquals(jsonPath.getInt("code"), 1000);
         assertNotNull(jsonPath.getJsonObject("data"));
     }
+    @Test
+    public void TestCase02(){
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
+
+        Response response = given().
+                contentType(ContentType.JSON).
+                with().
+                pathParam("auctionId", "1").
+                when().get("/totalLikes/{auctionId}");
+        System.out.println(response.getBody().asString());
+        JsonPath jsonPath = response.jsonPath();
+        assertEquals(jsonPath.getInt("code"), 1000);
+        assertNotNull(jsonPath.getJsonObject("data"));
+    }
+    @Test
+    public void TestCase03(){
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
+
+        Response response = given().
+                contentType(ContentType.JSON).
+                with().
+                pathParam("auctionId", "123").
+                when().get("/totalLikes/{auctionId}");
+        System.out.println(response.getBody().asString());
+        JsonPath jsonPath = response.jsonPath();
+        assertEquals(jsonPath.getInt("code"), 1000);
+        assertNotNull(jsonPath.getJsonObject("data"));
+    }
 
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();

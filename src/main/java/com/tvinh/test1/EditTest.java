@@ -2,6 +2,7 @@ package com.tvinh.test1;
 
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.json.simple.JSONObject;
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
@@ -32,7 +33,8 @@ public class EditTest {
 
         String ACCESS_TOKEN = loginTest.getAccessToken();
 
-        request.put("email", "ninhvinhdeptrai1@gmail.com");
+        String mail = RandomStringUtils.randomAlphabetic(10);
+        request.put("email", mail + "ninhvinhdeptrai1@gmail.com");
         request.put("password", "vinhdeptrai1");
         request.put("re_pass", "vinhdeptrai");
         request.put("address", null);
@@ -67,8 +69,8 @@ public class EditTest {
         LoginTest loginTest = new LoginTest();
 
         String ACCESS_TOKEN = loginTest.getAccessToken();
-
-        request.put("email", "ninhvinh1@gmail.com");
+        String mail = RandomStringUtils.randomAlphabetic(10);
+        request.put("email", mail + "ninhvinh1@gmail.com");
         request.put("password", "123456");
         request.put("re_pass", "123456");
         request.put("address", "MyAddress");

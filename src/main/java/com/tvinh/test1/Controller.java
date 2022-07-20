@@ -38,14 +38,14 @@ public class Controller implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         uriChoice.getItems().addAll("heroku2", "heroku3");
         uriChoice.setOnAction(this::setUriChoice);
-        apiChoice.getItems().addAll("Login", "Edit", "Sign Up", "Log Out", "Change_PassWord",
-                "Info", "get_list_auctions", "get_list_auctions_by_status", "get_list_auctions_by_Type",
-                "get_list_auctions_by_User", "get_detail_auction", "create_auction", "edit_auction",
-                "create_item", "create_comment", "get_list_comment", "create_bid",
-                "Get_list_bids", "Get_list_categories", "Get_list_brands", "Accept_max_bid",
-                "Contact_us", "Like_auction", "Get_list_like", "Total_likes_of_auction",
-                "Get_news", "Read_new", "Get_notifications", "Read_notifications", "Get_slider",
-                "search", "delete_comment", "UploadStatus", "Info_auction", "Info_Item", "Create_chat");
+        apiChoice.getItems().addAll("1, Login", "2, Edit", "3, Sign Up", "4, Log Out",
+                "5, Change_PassWord", "6, Info", "7, get_list_auctions", "8, get_list_auctions_by_status",
+                "9, get_detail_auction", "10, create_auction", "11, edit_auction", "12, create_item",
+                "13, get_list_comment", "14, create_bid", "15, Get_list_bids", "16, Get_list_categories",
+                "17, Get_list_brands", "18, Accept_max_bid", "19, Contact_us", "20, Like_auction",
+                "21, Get_list_like", "22, Total_likes_of_auction", "23, Get_news", "24, Read_new",
+                "25, Get_notifications", "26, Get_slider", "27, search", "28, UploadStatus",
+                "29, Info_auction", "30, Info_Item");
         apiChoice.setOnAction(this::setApiChoice);
         staticTxtArea = textAreaGUI;
     }
@@ -83,14 +83,6 @@ public class Controller implements Initializable {
             GetListAuctionsByStatusTest getAuctionStatus = new GetListAuctionsByStatusTest();
             getAuctionStatus.call();
         }
-        else if (Objects.equals(api, "get_list_auctions_by_user")){
-            GetListAuctionsByUser getAuctionUser = new GetListAuctionsByUser();
-            getAuctionUser.call();
-        }
-        else if (Objects.equals(api, "get_list_auctions_by_Type")){
-            GetListAuctionByTypeTest getAuctionType = new GetListAuctionByTypeTest();
-            getAuctionType.call();
-        }
         else if (Objects.equals(api, "get_detail_auction")){
             GetDetailsAutionTest getDetail= new GetDetailsAutionTest();
             getDetail.call();
@@ -106,10 +98,6 @@ public class Controller implements Initializable {
         else if (Objects.equals(api, "create_item")){
             CreateItemTest createItem = new CreateItemTest();
             createItem.call();
-        }
-        else if (Objects.equals(api, "create_comment")){
-            CreateCommentTest createComment = new CreateCommentTest();
-            createComment.call();
         }
         else if (Objects.equals(api, "get_list_comment")){
             GetListCommentTest GetComment = new GetListCommentTest();
@@ -163,20 +151,12 @@ public class Controller implements Initializable {
             Get_notifications hien = new Get_notifications();
             hien.call();
         }
-        else if (Objects.equals(api, "Read_notifications")){
-            Read_notifications hien = new Read_notifications();
-            hien.call();
-        }
         else if (Objects.equals(api, "Get_slider")){
             Get_slider hien = new Get_slider();
             hien.call();
         }
         else if (Objects.equals(api, "search")){
             Search hien = new Search();
-            hien.call();
-        }
-        else if (Objects.equals(api, "delete_comment")){
-            Delete_comment hien = new Delete_comment();
             hien.call();
         }
         else if (Objects.equals(api, "UploadStatus")){
@@ -191,10 +171,6 @@ public class Controller implements Initializable {
             Info_Item hien = new Info_Item();
             hien.call();
         }
-        else if (Objects.equals(api, "Create_chat")){
-            Create_chat hien = new Create_chat();
-            hien.call();
-        }
     }
 
     public void setUriChoice(ActionEvent event){
@@ -202,43 +178,40 @@ public class Controller implements Initializable {
         if (choice == "heroku2") baseuri = "https://auctions-app-2.herokuapp.com/api";
         else baseuri = "https://auction-app3.herokuapp.com/api";
     }
+    public void Clear(){
+        textAreaGUI.clear();
+    }
     public void setApiChoice(ActionEvent event){
         String choice = apiChoice.getValue();
-        if (choice == "Login") api = "login";
-        else if (choice == "Sign Up") api = "signup";
-        else if (choice == "Edit") api = "edit";
-        else if (choice == "Log Out") api = "logout";
-        else if (choice == "Change_PassWord") api = "ChangePass";
-        else if (choice == "Info") api = "info";
-        else if (choice == "get_list_auctions") api = "get_list_auctions";
-        else if (choice == "get_list_auctions_by_status") api = "get_list_auctions_by_status";
-        else if (choice == "get_list_auctions_by_Type") api = "get_list_auctions_by_Type";
-        else if (choice == "get_list_auctions_by_User") api = "get_list_auctions_by_user";
-        else if (choice == "get_detail_auction") api = "get_detail_auction";
-        else if (choice == "create_auction") api = "create_auction";
-        else if (choice == "edit_auction") api = "edit_auction";
-        else if (choice == "create_item") api = "create_item";
-        else if (choice == "create_comment") api = "create_comment";
-        else if (choice == "get_list_comment") api = "get_list_comment";
-        else if (choice == "create_bid") api = "create_bid";
-        else if (choice == "Get_list_bids") api = "Get_list_bids";
-        else if (choice == "Get_list_categories") api = "Get_list_categories";
-        else if (choice == "Get_list_brands") api = "Get_list_brands";
-        else if (choice == "Accept_max_bid") api = "Accept_max_bid";
-        else if (choice == "Contact_us") api = "Contact_us";
-        else if (choice == "Like_auction") api = "Like_auction";
-        else if (choice == "Get_list_like") api = "Get_list_like";
-        else if (choice == "Total_likes_of_auction") api = "Total_likes_of_auction";
-        else if (choice == "Get_news") api = "Get_news";
-        else if (choice == "Read_new") api = "Read_new";
-        else if (choice == "Get_notifications") api = "Get_notifications";
-        else if (choice == "Read_notifications") api = "Read_notifications";
-        else if (choice == "Get_slider") api = "Get_slider";
-        else if (choice == "search") api = "search";
-        else if (choice == "delete_comment") api = "delete_comment";
-        else if (choice == "UploadStatus") api = "UploadStatus";
-        else if (choice == "Info_auction") api = "Info_auction";
-        else if (choice == "Info_Item") api = "Info_Item";
-        else if (choice == "Create_chat") api = "Create_chat";
+        if (choice == "1, Login") api = "login";
+        else if (choice == "2, Sign Up") api = "signup";
+        else if (choice == "3, Edit") api = "edit";
+        else if (choice == "4, Log Out") api = "logout";
+        else if (choice == "5, Change_PassWord") api = "ChangePass";
+        else if (choice == "6, Info") api = "info";
+        else if (choice == "7, get_list_auctions") api = "get_list_auctions";
+        else if (choice == "8, get_list_auctions_by_status") api = "get_list_auctions_by_status";
+        else if (choice == "9, get_detail_auction") api = "get_detail_auction";
+        else if (choice == "10, create_auction") api = "create_auction";
+        else if (choice == "11, edit_auction") api = "edit_auction";
+        else if (choice == "12, create_item") api = "create_item";
+        else if (choice == "13, get_list_comment") api = "get_list_comment";
+        else if (choice == "14, create_bid") api = "create_bid";
+        else if (choice == "15, Get_list_bids") api = "Get_list_bids";
+        else if (choice == "16, Get_list_categories") api = "Get_list_categories";
+        else if (choice == "17, Get_list_brands") api = "Get_list_brands";
+        else if (choice == "18, Accept_max_bid") api = "Accept_max_bid";
+        else if (choice == "19, Contact_us") api = "Contact_us";
+        else if (choice == "20, Like_auction") api = "Like_auction";
+        else if (choice == "21, Get_list_like") api = "Get_list_like";
+        else if (choice == "22, Total_likes_of_auction") api = "Total_likes_of_auction";
+        else if (choice == "23, Get_news") api = "Get_news";
+        else if (choice == "24, Read_new") api = "Read_new";
+        else if (choice == "25, Get_notifications") api = "Get_notifications";
+        else if (choice == "26, Get_slider") api = "Get_slider";
+        else if (choice == "27, search") api = "search";
+        else if (choice == "28, UploadStatus") api = "UploadStatus";
+        else if (choice == "29, Info_auction") api = "Info_auction";
+        else if (choice == "30, Info_Item") api = "Info_Item";
     }
 }

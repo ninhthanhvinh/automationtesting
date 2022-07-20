@@ -24,7 +24,7 @@ public class ChangePassTest {
         //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         JSONObject request = new JSONObject();
-        request.put("old_pass", "123456");
+        request.put("old_pass", "12345678");
         request.put("new_pass", "12345678");
         request.put("re_pass", "12345678");
 
@@ -49,7 +49,7 @@ public class ChangePassTest {
         //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
         JSONObject request = new JSONObject();
-        request.put("old_pass", "12345678");
+        request.put("old_pass", "123456");
         request.put("new_pass", "123456");
         request.put("re_pass", "123456");
 

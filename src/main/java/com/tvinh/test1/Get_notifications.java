@@ -37,6 +37,7 @@ public class Get_notifications {
 
         JsonPath jpath = res.jsonPath();
         LinkedHashMap<String, String> data = jpath.get("data");
+        System.out.println(jpath.getInt("code"));
         System.out.println(data);
 
     }
@@ -53,13 +54,14 @@ public class Get_notifications {
 
         Response res = given().header("Authorization", "bearer" + ACCESS_TOKEN).
                 contentType(JSON).
-                queryParam("index", "114120000").
-                queryParam("count", "200004234").
+                queryParam("index", "").
+                queryParam("count", "").
                 when().get("/notifications");
         res.then().statusCode(200);
 
         JsonPath jpath = res.jsonPath();
         LinkedHashMap<String, String> data = jpath.get("data");
+        System.out.println(jpath.getInt("code"));
         System.out.println(data);
 
     }
@@ -80,12 +82,13 @@ public class Get_notifications {
         Response res = given().header("Authorization", "bearer" + ACCESS_TOKEN).
                 contentType(JSON).
                 queryParam("index", id).
-                queryParam("count", id*id).
+                queryParam("count", "").
                 when().get("/notifications");
         res.then().statusCode(200);
 
         JsonPath jpath = res.jsonPath();
         LinkedHashMap<String, String> data = jpath.get("data");
+        System.out.println(jpath.getInt("code"));
         System.out.println(data);
 
     }

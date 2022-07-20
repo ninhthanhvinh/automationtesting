@@ -21,6 +21,7 @@ public class UploadStatusTest {
                                 contentType(ContentType.JSON).
                             when().
                                 get("/auctions/update/status");
+        System.out.println(response.getBody().asPrettyString());
         assertEquals(response.jsonPath().getInt("code"), 1000);
     }
     public void call(){

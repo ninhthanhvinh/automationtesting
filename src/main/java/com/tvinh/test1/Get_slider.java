@@ -30,7 +30,6 @@ public class Get_slider {
         JsonPath jpath = res.jsonPath();
         assertEquals(jpath.getInt("code"), 1000);
     }
-
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();

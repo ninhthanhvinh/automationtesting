@@ -36,7 +36,71 @@ public class GetListCommentTest {
         assertEquals(jsonPath.getInt("code"), 1000);
 
     }
+    @Test
+    public void TestCase02(){
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
+        LoginTest loginTest = new LoginTest();
+        String accessToken = "bearer" + loginTest.getAccessToken();
+
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
+
+        Response response = given().
+                contentType(ContentType.JSON).with().
+                header("Authorization", accessToken).
+                pathParam("auctionId", id).
+                queryParam("index", "").
+                queryParam("count", "").
+                when().
+                get("/comments/{auctionId}");
+        System.out.println(response.getBody().asString());
+        JsonPath jsonPath = response.jsonPath();
+        assertEquals(jsonPath.getInt("code"), 1000);
+
+    }
+    @Test
+    public void TestCase03(){
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
+
+        LoginTest loginTest = new LoginTest();
+        String accessToken = "bearer" + loginTest.getAccessToken();
+
+        Response response = given().
+                contentType(ContentType.JSON).with().
+                header("Authorization", accessToken).
+                pathParam("auctionId", "453").
+                queryParam("index", "1").
+                queryParam("count", "2").
+                when().
+                get("/comments/{auctionId}");
+        System.out.println(response.getBody().asString());
+        JsonPath jsonPath = response.jsonPath();
+        assertEquals(jsonPath.getInt("code"), 1000);
+
+    }
+    @Test
+    public void TestCase04(){
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
+
+        LoginTest loginTest = new LoginTest();
+        String accessToken = "bearer" + loginTest.getAccessToken();
+
+        Response response = given().
+                contentType(ContentType.JSON).with().
+                pathParam("auctionId", "453").
+                queryParam("index", "1").
+                queryParam("count", "2").
+                when().
+                get("/comments/{auctionId}");
+        System.out.println(response.getBody().asString());
+        JsonPath jsonPath = response.jsonPath();
+        assertEquals(jsonPath.getInt("code"), 1000);
+
+    }
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();

@@ -27,27 +27,52 @@ public class Create_bid {
         LoginTest loginTest = new LoginTest();
         String ACCESS_TOKEN = loginTest.getAccessToken();
 
-        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
-        int id = auctionCreateTest.getID();
+        GetListAuctionsByStatusTest gl = new GetListAuctionsByStatusTest();
+        int id = gl.getActiveAuctionID();
 
         Response res = given().
-                            header("Authorization", "bearer" + ACCESS_TOKEN).
-                            contentType(JSON).
-                        with().
-                            pathParam("auctionId", id).
-                            queryParam("price", 111000000).
-                            queryParam("bid_last_id", "1234").
-                        when().
-                            post("/bids/create/{auctionId}");
+                header("Authorization", "bearer" + ACCESS_TOKEN).
+                contentType(JSON).
+                with().
+                pathParam("auctionId", id).
+                queryParam("price", 999999999).
+                queryParam("bid_last_id", "1234").
+                when().
+                post("/bids/create/{auctionId}");
 
         res.then().statusCode(200);
         System.out.println(res.getBody().asString());
 
         JsonPath jpath = res.jsonPath();
-        assertEquals(jpath.getInt("code"), 1000);
+        assertEquals(jpath.getInt("code"), 1001);
 
     }
 
+    @Test
+    public void Test02() {
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
+
+        LoginTest loginTest = new LoginTest();
+        String ACCESS_TOKEN = loginTest.getAccessToken();
+
+        Response res = given().
+                header("Authorization", "bearer" + ACCESS_TOKEN).
+                contentType(JSON).
+                with().
+                pathParam("auctionId", "1").
+                queryParam("price", 999999999).
+                queryParam("bid_last_id", "1234").
+                when().
+                post("/bids/create/{auctionId}");
+
+        res.then().statusCode(200);
+        System.out.println(res.getBody().asString());
+
+        JsonPath jpath = res.jsonPath();
+        assertEquals(jpath.getInt("code"), 1008);
+
+    }
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();

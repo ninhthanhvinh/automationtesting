@@ -23,9 +23,7 @@ public class GetCategoriesTest {
         response.then().statusCode(200);
         System.out.println(response.getBody().asString());
         assertNotNull(response);
-
     }
-
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();

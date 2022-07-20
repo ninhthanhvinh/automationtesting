@@ -12,6 +12,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
+import static org.testng.Assert.assertNotEquals;
 import static org.testng.AssertJUnit.assertEquals;
 
 public class Accept_max_bid {
@@ -32,18 +33,68 @@ public class Accept_max_bid {
         int id = auctionCreateTest.getID();
 
         Response res = given().
-                            header("Authorization", "bearer" + ACCESS_TOKEN).
-                            contentType(ContentType.JSON).
-                        with().
-                            pathParam("auctionId", id).
-                            queryParam("selling_info", "sell baby Vinh").
-                        when().
-                            post("/accept/{auctionId}");
+                header("Authorization", "bearer" + ACCESS_TOKEN).
+                contentType(ContentType.JSON).
+                with().
+                pathParam("auctionId", id).
+                queryParam("selling_info", "sell baby Vinh").
+                when().
+                post("/accept/{auctionId}");
         res.then().statusCode(200);
         System.out.println(res.getBody().asString());
 
         JsonPath jpath = res.jsonPath();
         assertEquals(jpath.getInt("code"), 1009);
+    }
+
+
+    @Test
+    public void Test02(){
+
+        baseURI = AutomationTesting.baseuri;
+//        baseURI = "https://auctions-app-2.herokuapp.com/api";
+
+        LoginTest loginTest = new LoginTest();
+        String ACCESS_TOKEN = loginTest.getAccessToken();
+
+
+        Response res = given().
+                header("Authorization", "bearer" + ACCESS_TOKEN).
+                contentType(ContentType.JSON).
+                with().
+                pathParam("auctionId", 123).
+                queryParam("selling_info", "sell baby Vinh").
+                when().
+                post("/accept/{auctionId}");
+        res.then().statusCode(200);
+        System.out.println(res.getBody().asString());
+
+        JsonPath jpath = res.jsonPath();
+        assertEquals(jpath.getInt("code"), 1006);
+    }
+    @Test
+    public void Test03(){
+
+        baseURI = AutomationTesting.baseuri;
+//        baseURI = "https://auctions-app-2.herokuapp.com/api";
+
+        LoginTest loginTest = new LoginTest();
+        String ACCESS_TOKEN = loginTest.getAccessToken();
+
+
+        Response res = given().
+                header("Authorization", "bearer" + ACCESS_TOKEN).
+                contentType(ContentType.JSON).
+                with().
+                pathParam("auctionId", 213).
+                queryParam("selling_info", "").
+                when().
+                post("/accept/{auctionId}");
+        res.then().statusCode(200);
+        System.out.println(res.getBody().asString());
+
+        JsonPath jpath = res.jsonPath();
+        assertEquals(jpath.getInt("code"), 1001);
     }
 
     public void call(){

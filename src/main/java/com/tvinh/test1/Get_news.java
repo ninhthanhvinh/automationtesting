@@ -40,6 +40,7 @@ public class Get_news {
 
         JsonPath jpath = res.jsonPath();
         LinkedHashMap<String, String> data = jpath.get("data");
+        System.out.println(jpath.getInt("code"));
         System.out.println(data);
 
         AssertJUnit.assertNotNull(res);
@@ -53,25 +54,46 @@ public class Get_news {
         LoginTest loginTest = new LoginTest();
         String ACCESS_TOKEN = loginTest.getAccessToken();
 
-        String index = RandomStringUtils.randomAlphanumeric(10);
-        String count = RandomStringUtils.randomAlphanumeric(10);
-
         Response res = given().header("Authorization", "bearer" + ACCESS_TOKEN).
                 contentType(JSON).
                 with().
-                queryParam("index", "3").
-                queryParam("count", "4").
+                queryParam("index", "2").
+                queryParam("count", "3").
                 when().
                 get("/news");
         res.then().statusCode(200);
 
         JsonPath jpath = res.jsonPath();
         LinkedHashMap<String, String> data = jpath.get("data");
+        System.out.println(jpath.getInt("code"));
         System.out.println(data);
 
         AssertJUnit.assertNotNull(res);
     }
+    @Test
+    public void Test03() {
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
+        LoginTest loginTest = new LoginTest();
+        String ACCESS_TOKEN = loginTest.getAccessToken();
+
+        Response res = given().header("Authorization", "bearer" + ACCESS_TOKEN).
+                contentType(JSON).
+                with().
+                queryParam("index", "").
+                queryParam("count", "").
+                when().
+                get("/news");
+        res.then().statusCode(200);
+
+        JsonPath jpath = res.jsonPath();
+        LinkedHashMap<String, String> data = jpath.get("data");
+        System.out.println(jpath.getInt("code"));
+        System.out.println(data);
+
+        AssertJUnit.assertNotNull(res);
+    }
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();

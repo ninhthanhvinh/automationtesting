@@ -34,7 +34,6 @@ public class LogOutTest {
         assertNotEquals(code, 1000);
 */
     }
-
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();

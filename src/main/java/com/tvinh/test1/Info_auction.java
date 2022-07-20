@@ -38,6 +38,50 @@ public class Info_auction {
         assertEquals(jpath.getInt("code"), 1000);
 
     }
+
+    @Test
+    public void Test02(){
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
+
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
+
+        Response res = given().
+                contentType(ContentType.JSON).
+                with().
+                pathParam("auctionId", id).
+                when().
+                get("/auctions/info/{auctionId}");
+        res.then().statusCode(200);
+
+        System.out.println(res.getBody().asString());
+        JsonPath jpath = res.jsonPath();
+        assertEquals(jpath.getInt("code"), 1004);
+    }
+    @Test
+    public void Test03(){
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
+
+        LoginTest loginTest = new LoginTest();
+        String access_token = loginTest.getAccessToken();
+
+        Response res = given().
+                header("Authorization", "bearer" + access_token).
+                contentType(ContentType.JSON).
+                with().
+                pathParam("auctionId", "123").
+                when().
+                get("/auctions/info/{auctionId}");
+        res.then().statusCode(200);
+
+        System.out.println(res.getBody().asString());
+        JsonPath jpath = res.jsonPath();
+        assertEquals(jpath.getInt("code"), 1000);
+
+    }
+
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();

@@ -31,12 +31,32 @@ public class Info_Item {
                 pathParam("itemId", 1).
                 when().
                 get("/items/info/{itemId}");
-        res.then().statusCode(200);
 
         System.out.println(res.getBody().asString());
         JsonPath jpath = res.jsonPath();
         assertEquals(jpath.getInt("code"), 1000);
+    }
+    @Test
+    public void Test02(){
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
+        LoginTest loginTest = new LoginTest();
+        String access_token = loginTest.getAccessToken();
+
+        //AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        //int id = auctionCreateTest.getID();
+
+        Response res = given().
+                contentType(ContentType.JSON).
+                with().
+                pathParam("itemId", 1).
+                when().
+                get("/items/info/{itemId}");
+
+        System.out.println(res.getBody().asString());
+        JsonPath jpath = res.jsonPath();
+        assertEquals(jpath.getInt("code"), 1004);
     }
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();

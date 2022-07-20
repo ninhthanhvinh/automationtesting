@@ -10,17 +10,13 @@ import org.testng.TestNG;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.baseURI;
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertNotNull;
+import static org.testng.Assert.*;
 
 public class GetDetailsAutionTest {
     @Test
     public void TestCase01(){
         baseURI = AutomationTesting.baseuri;
         //baseURI = "https://auctions-app-2.herokuapp.com/api";
-
-        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
-        int id = auctionCreateTest.getID();
 
         Response response = given().
                                 contentType(ContentType.JSON).
@@ -39,9 +35,6 @@ public class GetDetailsAutionTest {
         baseURI = AutomationTesting.baseuri;
         //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
-        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
-        int id = auctionCreateTest.getID();
-
         Response response = given().
                 contentType(ContentType.JSON).
                 with().
@@ -59,9 +52,6 @@ public class GetDetailsAutionTest {
         baseURI = AutomationTesting.baseuri;
         //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
-        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
-        int id = auctionCreateTest.getID();
-
         Response response = given().
                 contentType(ContentType.JSON).
                 with().
@@ -74,7 +64,27 @@ public class GetDetailsAutionTest {
         assertEquals(jsonPath.getInt("code"), 1000);
         assertNotNull(jsonPath.getJsonObject("data"));
     }
+/*
+    @Test
+    public void TestCase04(){
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
+
+        Response response = given().
+                contentType(ContentType.JSON).
+                with().
+                pathParam("auctionId", id).
+                when().
+                get("/auctions/detail/{auctionId}");
+        System.out.println(response.getStatusCode());
+        System.out.println(response.getBody().asString());
+        JsonPath jsonPath = response.jsonPath();
+        assertNotEquals(jsonPath.getInt("code"), 1000);
+    }
+    */
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();

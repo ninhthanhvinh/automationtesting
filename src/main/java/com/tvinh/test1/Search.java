@@ -93,6 +93,25 @@ public class Search {
         assertEquals(jpath.getInt("code"), 9998);
     }
 
+    @Test
+    public void Test05() {
+
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
+
+        Response response = given().
+                accept(JSON).
+                queryParam("type", "5").
+                queryParam("key", "car").
+                when().
+                get("/search");
+
+        response.then().statusCode(200);
+
+        System.out.println(response.getBody().asString());
+        JsonPath jpath = response.jsonPath();
+        assertEquals(jpath.getInt("code"), 9998);
+    }
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();

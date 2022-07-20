@@ -50,15 +50,12 @@ public class Get_list_bids {
         baseURI = AutomationTesting.baseuri;
         //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
-        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
-        int id = auctionCreateTest.getID();
-
         Response res = given().
                 contentType(ContentType.JSON).
                 with().
-                pathParam("auctionId", id).
-                queryParam("index", "1000").
-                queryParam("count", "2000").
+                pathParam("auctionId", 1).
+                queryParam("index", "2").
+                queryParam("count", "3").
                 when().
                 get("/bids/{auctionId}");
         res.then().statusCode(200);
@@ -69,10 +66,11 @@ public class Get_list_bids {
 
         assertEquals(jpath.getInt("code"), 1000);
     }
+
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();
-        testng.setTestClasses(new Class[] { Read_new.class });
+        testng.setTestClasses(new Class[] { Get_list_bids.class });
         testng.addListener(tla);
         testng.run();
     }

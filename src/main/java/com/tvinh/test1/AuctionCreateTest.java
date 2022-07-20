@@ -58,8 +58,6 @@ public class AuctionCreateTest {
         JsonPath jsonPath = response.jsonPath();
         assertEquals(jsonPath.getInt("code"), 1000);
     }
-
-
     public int getID(){
 
         baseURI = AutomationTesting.baseuri;
@@ -90,7 +88,6 @@ public class AuctionCreateTest {
                 body(request.toJSONString()).
                 when().
                 post("/auctions/create");
-        System.out.println(response.getBody().asString());
         JsonPath jsonPath = response.jsonPath();
         LinkedHashMap<String, Object> data = jsonPath.get("data");
         return (int) data.get("auction_id");
