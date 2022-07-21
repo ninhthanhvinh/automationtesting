@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-20T21:05:12 ICT" name="Command line suite" finished-at="2022-07-20T21:05:16 ICT" duration-ms="4205">
+  <suite started-at="2022-07-21T17:34:05 ICT" name="Command line suite" finished-at="2022-07-21T17:34:20 ICT" duration-ms="15682">
     <groups>
     </groups>
-    <test started-at="2022-07-20T21:05:12 ICT" name="Command line test" finished-at="2022-07-20T21:05:16 ICT" duration-ms="4205">
-      <class name="com.tvinh.test1.UploadStatusTest">
-        <test-method signature="Test01()[pri:0, instance:com.tvinh.test1.UploadStatusTest@7254209c]" started-at="2022-07-20T21:05:12 ICT" name="Test01" finished-at="2022-07-20T21:05:16 ICT" duration-ms="4182" status="PASS">
+    <test started-at="2022-07-21T17:34:05 ICT" name="Command line test" finished-at="2022-07-21T17:34:20 ICT" duration-ms="15682">
+      <class name="com.tvinh.test1.Read_new">
+        <test-method signature="Test01()[pri:0, instance:com.tvinh.test1.Read_new@46864bc7]" started-at="2022-07-21T17:34:05 ICT" name="Test01" finished-at="2022-07-21T17:34:11 ICT" duration-ms="6601" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test01 -->
-      </class> <!-- com.tvinh.test1.UploadStatusTest -->
+        <test-method signature="Test02()[pri:0, instance:com.tvinh.test1.Read_new@46864bc7]" started-at="2022-07-21T17:34:11 ICT" name="Test02" finished-at="2022-07-21T17:34:14 ICT" duration-ms="2557" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test02 -->
+        <test-method signature="Test03()[pri:0, instance:com.tvinh.test1.Read_new@46864bc7]" started-at="2022-07-21T17:34:14 ICT" name="Test03" finished-at="2022-07-21T17:34:20 ICT" duration-ms="6522" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test03 -->
+      </class> <!-- com.tvinh.test1.Read_new -->
     </test> <!-- Command line test -->
   </suite> <!-- Command line suite -->
 </testng-results>

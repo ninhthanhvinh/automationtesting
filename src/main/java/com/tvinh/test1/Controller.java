@@ -45,7 +45,7 @@ public class Controller implements Initializable {
                 "17, Get_list_brands", "18, Accept_max_bid", "19, Contact_us", "20, Like_auction",
                 "21, Get_list_like", "22, Total_likes_of_auction", "23, Get_news", "24, Read_new",
                 "25, Get_notifications", "26, Get_slider", "27, search", "28, UploadStatus",
-                "29, Info_auction", "30, Info_Item");
+                "29, Info_auction", "30, Info_Item", "31, Read_notifications");
         apiChoice.setOnAction(this::setApiChoice);
         staticTxtArea = textAreaGUI;
     }
@@ -171,6 +171,10 @@ public class Controller implements Initializable {
             Info_Item hien = new Info_Item();
             hien.call();
         }
+        else if (Objects.equals(api, "Read_notifications")){
+            Read_notifications hien = new Read_notifications();
+            hien.call();
+        }
     }
 
     public void setUriChoice(ActionEvent event){
@@ -213,5 +217,6 @@ public class Controller implements Initializable {
         else if (choice == "28, UploadStatus") api = "UploadStatus";
         else if (choice == "29, Info_auction") api = "Info_auction";
         else if (choice == "30, Info_Item") api = "Info_Item";
+        else if (choice == "31, Read_notifications") api = "Read_notifications";
     }
 }

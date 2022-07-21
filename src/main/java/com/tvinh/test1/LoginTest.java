@@ -108,20 +108,22 @@ public class LoginTest {
         baseURI = AutomationTesting.baseuri;
         //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
-        request.put("email", "thanh12345@gmail.com");
-        request.put("password", "");
+        //request.put("email", "ninhvinhdeptrai@gmail.com");
+        //request.put("password", "vinhdeptrai");
 
         Response response = given().contentType(JSON).
-                body(request.toJSONString()).
+                //body(request.toJSONString()).
+                        with().
+                queryParam("email", "thanh12345@gmail.com").
+                queryParam("password", "123456").
                 when().
                 post("/login");
         System.out.println(response.getBody().asString());
         JsonPath jpath = response.jsonPath();
         int code = jpath.getInt("code");
-        assertEquals(code, 1001);
-        if(code != 1001) System.out.println("Test04 fail");
+        assertEquals(code, 1000);
+        if(code != 1000) System.out.println("Test04 fail");
     }
-
     @Test
     public void Test05() {
 
@@ -246,6 +248,32 @@ public class LoginTest {
         if(code != 1001) System.out.println("Test09 fail");
     }
 
+    @Test
+    public void Test10() {
+
+        Map<String, Object> map = new HashMap<String, Object>();
+
+        JSONObject request = new JSONObject();
+
+        baseURI = AutomationTesting.baseuri;
+
+        Random random = new Random();
+        String over255 = RandomStringUtils.randomAlphabetic(255);
+
+        request.put("email", "vinhnt67@gmail.com");
+        request.put("password", "12345678");
+
+        Response response = given().contentType(JSON).
+                body(request.toJSONString()).
+                when().
+                post("/login");
+        System.out.println(response.getBody().asString());
+        JsonPath jpath = response.jsonPath();
+        int code = jpath.getInt("code");
+        assertEquals(code, 1000);
+        if(code != 1000) System.out.println("Test10 fail");
+    }
+
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();
@@ -253,6 +281,7 @@ public class LoginTest {
         testng.addListener(tla);
         testng.run();
     }
+
 
     public String getAccessToken(){
         Map<String, Object> map = new HashMap<String, Object>();
