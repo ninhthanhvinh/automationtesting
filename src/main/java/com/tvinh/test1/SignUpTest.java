@@ -30,9 +30,9 @@ public class SignUpTest {
         baseURI = AutomationTesting.baseuri;
         //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
-        req.put("email", "ninhvinhdeptrai@gmail.com");
-        req.put("password", "vinhdeptrai");
-        req.put("re_pass", "vinhdeptrai");
+        req.put("email", "vinhnt1@gmail.com");
+        req.put("password", "123456");
+        req.put("re_pass", "123456");
         req.put("address", null);
         req.put("name", "vinh");
         req.put("phone", "090");

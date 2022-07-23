@@ -173,30 +173,6 @@ public class LoginTest {
     }
 
     @Test
-    public void Test07() {
-
-        Map<String, Object> map = new HashMap<String, Object>();
-
-        JSONObject request = new JSONObject();
-
-        //baseURI = AutomationTesting.baseuri;
-         baseURI = "https://auctions-app-2.herokuapp.com/api";
-
-        request.put("email", "nvh@gmail.com");
-        request.put("password", "123456");
-
-        Response response = given().contentType(JSON).
-                body(request.toJSONString()).
-                when().
-                post("/login");
-        System.out.println(response.getBody().asString());
-        JsonPath jpath = response.jsonPath();
-        int code = jpath.getInt("code");
-        assertEquals(code, 1000);
-        if(code != 1002) System.out.println("Test07 fail");
-    }
-
-    @Test
     public void Test08() {
 
         Map<String, Object> map = new HashMap<String, Object>();
@@ -260,8 +236,8 @@ public class LoginTest {
         Random random = new Random();
         String over255 = RandomStringUtils.randomAlphabetic(255);
 
-        request.put("email", "vinhnt67@gmail.com");
-        request.put("password", "12345678");
+        request.put("email", "vinhnt1@gmail.com");
+        request.put("password", "123456");
 
         Response response = given().contentType(JSON).
                 body(request.toJSONString()).
@@ -291,8 +267,8 @@ public class LoginTest {
         baseURI = AutomationTesting.baseuri;
         //baseURI = "https://auctions-app-2.herokuapp.com/api";
 
-        request.put("email", "vinhnt67@gmail.com");
-        request.put("password", "12345678");
+        request.put("email", "vinhnt1@gmail.com");
+        request.put("password", "123456");
 
         Response response = given().contentType(JSON).
                 body(request.toJSONString()).

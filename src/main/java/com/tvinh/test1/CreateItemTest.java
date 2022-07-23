@@ -215,6 +215,35 @@ public class CreateItemTest {
         JsonPath jsonPath = response.jsonPath();
         assertEquals(jsonPath.getInt("code"),1001);
     }
+
+    @Test
+    public void TestCase07(){
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
+
+        JSONObject request = new JSONObject();
+        request.put("name", RandomStringUtils.randomAlphanumeric(10));
+        request.put("starting_price", 1);
+        request.put("brand_id", 5);
+        request.put("description", RandomStringUtils.randomAlphanumeric(10));
+        request.put("series", RandomStringUtils.randomAlphanumeric(10));
+        request.put("images", null);
+
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
+
+        Response response = given().
+                contentType(ContentType.JSON).
+                with().
+                pathParam("auctionId", id).
+                with().
+                body(request.toJSONString()).
+                when().
+                post("/items/create/{auctionId}");
+        System.out.println(response.getBody().asString());
+        JsonPath jsonPath = response.jsonPath();
+        assertEquals(jsonPath.getInt("code"),1000);
+    }
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();

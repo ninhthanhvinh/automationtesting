@@ -34,9 +34,9 @@ public class EditTest {
         String ACCESS_TOKEN = loginTest.getAccessToken();
 
         String mail = RandomStringUtils.randomAlphabetic(10);
-        request.put("email", mail + "ninhvinhdeptrai1@gmail.com");
-        request.put("password", "vinhdeptrai1");
-        request.put("re_pass", "vinhdeptrai");
+        request.put("email", "vinh123a@gmail.com");
+        request.put("password", "123456");
+        request.put("re_pass", "123456");
         request.put("address", null);
         request.put("name", "MyName");
         request.put("phone", "09090909090");
@@ -68,9 +68,8 @@ public class EditTest {
 
         LoginTest loginTest = new LoginTest();
 
-        String ACCESS_TOKEN = loginTest.getAccessToken();
-        String mail = RandomStringUtils.randomAlphabetic(10);
-        request.put("email", mail + "ninhvinh1@gmail.com");
+
+        request.put("email", "vinh123a@gmail.com");
         request.put("password", "123456");
         request.put("re_pass", "123456");
         request.put("address", "MyAddress");
@@ -79,15 +78,12 @@ public class EditTest {
         request.put("avatar", null);
 
         Response response = given().
-                header("Authorization","Bearer" + ACCESS_TOKEN).
                 contentType(JSON).
                 body(request.toJSONString()).
                 when().
                 post("/edit");
 
         System.out.println(response.getBody().asString());
-
-        response.then().statusCode(200);
 
         JsonPath jpath = response.jsonPath();
         int code = jpath.getInt("code");

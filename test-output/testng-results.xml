@@ -1,25 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-21T17:34:05 ICT" name="Command line suite" finished-at="2022-07-21T17:34:20 ICT" duration-ms="15682">
+  <suite started-at="2022-07-23T11:51:11 ICT" name="Command line suite" finished-at="2022-07-23T11:51:25 ICT" duration-ms="13580">
     <groups>
     </groups>
-    <test started-at="2022-07-21T17:34:05 ICT" name="Command line test" finished-at="2022-07-21T17:34:20 ICT" duration-ms="15682">
-      <class name="com.tvinh.test1.Read_new">
-        <test-method signature="Test01()[pri:0, instance:com.tvinh.test1.Read_new@46864bc7]" started-at="2022-07-21T17:34:05 ICT" name="Test01" finished-at="2022-07-21T17:34:11 ICT" duration-ms="6601" status="PASS">
+    <test started-at="2022-07-23T11:51:11 ICT" name="Command line test" finished-at="2022-07-23T11:51:25 ICT" duration-ms="13580">
+      <class name="com.tvinh.test1.GetListAuctionTest">
+        <test-method signature="Test01()[pri:0, instance:com.tvinh.test1.GetListAuctionTest@7850e91d]" started-at="2022-07-23T11:51:11 ICT" name="Test01" finished-at="2022-07-23T11:51:14 ICT" duration-ms="3053" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test01 -->
-        <test-method signature="Test02()[pri:0, instance:com.tvinh.test1.Read_new@46864bc7]" started-at="2022-07-21T17:34:11 ICT" name="Test02" finished-at="2022-07-21T17:34:14 ICT" duration-ms="2557" status="PASS">
+        <test-method signature="Test02()[pri:0, instance:com.tvinh.test1.GetListAuctionTest@7850e91d]" started-at="2022-07-23T11:51:14 ICT" name="Test02" finished-at="2022-07-23T11:51:16 ICT" duration-ms="1224" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test02 -->
-        <test-method signature="Test03()[pri:0, instance:com.tvinh.test1.Read_new@46864bc7]" started-at="2022-07-21T17:34:14 ICT" name="Test03" finished-at="2022-07-21T17:34:20 ICT" duration-ms="6522" status="PASS">
+        <test-method signature="Test03()[pri:0, instance:com.tvinh.test1.GetListAuctionTest@7850e91d]" started-at="2022-07-23T11:51:16 ICT" name="Test03" finished-at="2022-07-23T11:51:17 ICT" duration-ms="1212" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test03 -->
-      </class> <!-- com.tvinh.test1.Read_new -->
+        <test-method signature="Test04()[pri:0, instance:com.tvinh.test1.GetListAuctionTest@7850e91d]" started-at="2022-07-23T11:51:17 ICT" name="Test04" finished-at="2022-07-23T11:51:18 ICT" duration-ms="1236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test04 -->
+        <test-method signature="Test05()[pri:0, instance:com.tvinh.test1.GetListAuctionTest@7850e91d]" started-at="2022-07-23T11:51:18 ICT" name="Test05" finished-at="2022-07-23T11:51:19 ICT" duration-ms="1240" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test05 -->
+        <test-method signature="Test06()[pri:0, instance:com.tvinh.test1.GetListAuctionTest@7850e91d]" started-at="2022-07-23T11:51:19 ICT" name="Test06" finished-at="2022-07-23T11:51:21 ICT" duration-ms="1197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test06 -->
+        <test-method signature="Test07()[pri:0, instance:com.tvinh.test1.GetListAuctionTest@7850e91d]" started-at="2022-07-23T11:51:21 ICT" name="Test07" finished-at="2022-07-23T11:51:25 ICT" duration-ms="4392" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test07 -->
+      </class> <!-- com.tvinh.test1.GetListAuctionTest -->
     </test> <!-- Command line test -->
   </suite> <!-- Command line suite -->
 </testng-results>
