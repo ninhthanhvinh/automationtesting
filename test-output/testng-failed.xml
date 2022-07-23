@@ -3,11 +3,11 @@
 <suite name="Failed suite [Command line suite]">
   <test thread-count="5" name="Command line test(failed)">
     <classes>
-      <class name="com.tvinh.test1.CreateItemTest">
+      <class name="com.tvinh.test1.CreateCommentTest">
         <methods>
-          <include name="TestCase07"/>
+          <include name="TestCase02"/>
         </methods>
-      </class> <!-- com.tvinh.test1.CreateItemTest -->
+      </class> <!-- com.tvinh.test1.CreateCommentTest -->
     </classes>
   </test> <!-- Command line test(failed) -->
 </suite> <!-- Failed suite [Command line suite] -->

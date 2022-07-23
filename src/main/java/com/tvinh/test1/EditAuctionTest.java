@@ -251,6 +251,41 @@ public class EditAuctionTest {
         assertEquals(jsonPath.getInt("code"), 1001);
     }
 
+    @Test
+    public void TestCase07(){
+
+        baseURI = AutomationTesting.baseuri;
+        //baseURI = "https://auctions-app-2.herokuapp.com/api";
+
+
+        LocalDateTime today = LocalDateTime.now();
+        LocalDateTime startDay = today.plusDays(1);
+        LocalDateTime endDay = today.plusDays(3);
+        String startString = startDay.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+        String endString = endDay.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+
+        String randomString = RandomStringUtils.randomAlphanumeric(10);
+
+        JSONObject request = new JSONObject();
+        request.put("category_id", 1);
+        request.put("start_date", startString);
+        request.put("end_date", endString);
+        request.put("title_ni", "day la title " + randomString);
+
+        AuctionCreateTest auctionCreateTest = new AuctionCreateTest();
+        int id = auctionCreateTest.getID();
+
+        Response response = given().
+                contentType(ContentType.JSON).
+                with().
+                pathParam("auctionID",id).
+                body(request.toJSONString()).
+                when().
+                post("/auctions/edit/{auctionID}");
+        System.out.println(response.getBody().asString());
+        JsonPath jsonPath = response.jsonPath();
+        assertEquals(jsonPath.getInt("code"), 1004);
+    }
     public void call(){
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();
